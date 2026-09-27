@@ -306,7 +306,7 @@
                     <!-- Why Choose Image Start -->
                     <div class="why-choose-image">
                         <figure>
-                            <img src="{{ asset('frontend/images/about/why-choose-us.webp') }}" alt="">
+                            <img src="{{ \App\Models\SiteSetting::get('why_choose_us_image') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('why_choose_us_image'))) : asset('frontend/images/about/why-choose-us.webp') }}" alt="">
                         </figure>
                     </div>
                     <!-- Why Choose Image End -->
@@ -324,7 +324,7 @@
                     <!-- Our History Image Start -->
                     <div class="our-history-image">
                         <figure class="image-anime reveal">
-                            <img src="{{ asset('frontend/images/about/ceo.webp') }}" alt="">
+                            <img src="{{ \App\Models\SiteSetting::get('why_choose_us_image') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('why_choose_us_image'))) : asset('frontend/images/about/ceo.webp') }}" alt="">
                         </figure>
                     </div>
                     <!-- Our History Image End -->
@@ -963,4 +963,5 @@
 
 
 @endsection
+
 

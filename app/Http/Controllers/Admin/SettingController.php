@@ -26,6 +26,18 @@ class SettingController extends Controller
             $path = $request->file('about_image_2')->store('uploads/settings', 'public');
             $data['about_image_2'] = $path;
         }
+        if ($request->hasFile('experience_image_main')) {
+            $path = $request->file('experience_image_main')->store('uploads/settings', 'public');
+            $data['experience_image_main'] = $path;
+        }
+        if ($request->hasFile('experience_image_small')) {
+            $path = $request->file('experience_image_small')->store('uploads/settings', 'public');
+            $data['experience_image_small'] = $path;
+        }
+        if ($request->hasFile('why_choose_us_image')) {
+            $path = $request->file('why_choose_us_image')->store('uploads/settings', 'public');
+            $data['why_choose_us_image'] = $path;
+        }
 
         foreach ($data as $key => $value) {
             SiteSetting::updateOrCreate(

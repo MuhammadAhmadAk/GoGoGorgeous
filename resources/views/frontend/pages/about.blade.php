@@ -270,7 +270,7 @@
                     <!-- Our History Image Start -->
                     <div class="our-history-image">
                         <figure class="image-anime reveal">
-                            <img src="{{ asset('frontend/images/about/ceo.webp') }}" alt="">
+                            <img src="{{ \App\Models\SiteSetting::get('why_choose_us_image') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('why_choose_us_image'))) : asset('frontend/images/about/ceo.webp') }}" alt="">
                         </figure>
                     </div>
                     <!-- Our History Image End -->
@@ -434,7 +434,7 @@
                     <!-- Our Experience Image Start -->
                     <div class="our-experience-image">
                         <figure class="image-anime reveal">
-                            <img src="{{ asset('frontend/images/our-experience-image.jpg') }}" alt="Our Experience">
+                            <img src="{{ \App\Models\SiteSetting::get('experience_image_main') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('experience_image_main'))) : asset('frontend/images/our-experience-image.jpg') }}" alt="Our Experience">
                         </figure>
                     </div>
                     <!-- Our Experience Image End -->
@@ -462,7 +462,7 @@
                                 <!-- Our Experience Body Image Start -->
                                 <div class="our-experience-body-image">
                                     <figure>
-                                        <img src="{{ asset('frontend/images/our-experience-body-image.jpg') }}"
+                                        <img src="{{ \App\Models\SiteSetting::get('experience_image_small') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('experience_image_small'))) : asset('frontend/images/our-experience-body-image.jpg') }}"
                                             alt="Beauty Experience">
                                     </figure>
                                 </div>
@@ -1013,3 +1013,4 @@
 
 
 @endsection
+

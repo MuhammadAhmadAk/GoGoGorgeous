@@ -23,6 +23,27 @@
                     <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['about_image_2'])) }}" width="150" class="mt-2" style="border-radius:5px;">
                 @endif
             </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Experience Main Image</label>
+                <input type="file" name="experience_image_main" class="form-control">
+                @if(isset($settings['experience_image_main']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['experience_image_main'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Experience Small Image (10+)</label>
+                <input type="file" name="experience_image_small" class="form-control">
+                @if(isset($settings['experience_image_small']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['experience_image_small'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Why Choose Us Image</label>
+                <input type="file" name="why_choose_us_image" class="form-control">
+                @if(isset($settings['why_choose_us_image']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['why_choose_us_image'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Clinic Name / Hero Title</label>
                 <input type="text" name="hero_title" class="form-control" value="{{ $settings['hero_title'] ?? 'Go Go Gorgeous' }}">
@@ -62,3 +83,4 @@
         </button>
     </form>
 @endsection
+
