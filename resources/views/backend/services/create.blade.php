@@ -12,8 +12,12 @@
             <textarea name="description" class="form-control" rows="3"></textarea>
         </div>
         <div class="mb-3">
-            <label>Icon Image</label>
+            <label>Icon (Optional)</label>
             <input type="file" name="icon_image" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label>Service Image (Before/After or Main Photo)</label>
+            <input type="file" name="featured_image" class="form-control">
         </div>
         <div class="mb-3">
             <label>Price</label>

@@ -7,7 +7,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Icon/Image</th>
+                <th>Service Image</th>
                 <th>Title</th>
                 <th>Price</th>
                 <th>Status</th>
@@ -17,7 +17,7 @@
         <tbody>
             @foreach($services as $item)
             <tr>
-                <td><img src="{{ $item->icon_url }}" width="50" height="50"></td>
+                <td><img src="{{ $item->featured_image_url }}" width="80" style="border-radius: 5px; object-fit: cover; height: 50px;"></td>
                 <td>{{ $item->title }}</td>
                 <td>{{ $item->price }}</td>
                 <td>{{ $item->status ? 'Active' : 'Inactive' }}</td>
