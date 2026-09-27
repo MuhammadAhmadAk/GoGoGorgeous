@@ -34,7 +34,7 @@
     <!-- Mouse Cursor Css File -->
     <link rel="stylesheet" href="{{ asset('frontend/css/mousecursor.css') }}">
     <!-- Main Custom Css -->
-    <link href="{{ asset('frontend/css/custom.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('frontend/css/custom.css') }}?v=3.0" rel="stylesheet" media="screen">
 </head>
 
 <body>

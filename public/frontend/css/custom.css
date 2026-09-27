@@ -1235,22 +1235,13 @@ header.main-header .header-sticky.active {
 }
 
 .service-item::before {
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: linear-gradient(135deg, var(--accent-color) 0%, #FF3D9A 100%);
-	border-radius: 20px;
-	width: 100%;
-	height: 0;
-	transition: all 0.4s ease-in-out;
-	z-index: 0;
+	display: none !important;
+	content: none !important;
 }
 
 .service-item:hover:before {
-	top: auto;
-	height: 100%;
+	display: none !important;
+	content: none !important;
 }
 
 .service-item-body,
@@ -5977,11 +5968,19 @@ header.main-header .header-sticky.active {
    Fixed Uniform Aspect Ratio, Stays 100% Visible on Hover
    ========================================================= */
 
-/* Neutralize old pink overlay completely */
+/* =========================================================
+   Luxury Curve-Wave Service Card Redesign (Exact Reference)
+   ========================================================= */
+
+/* Neutralize ANY pseudo-element overlay */
 .service-item::before,
-.service-item:hover:before,
+.service-item::after,
+.service-item:hover::before,
+.service-item:hover::after,
 .dark-section .service-item::before,
-.dark-section .service-item:hover:before {
+.dark-section .service-item::after,
+.dark-section .service-item:hover::before,
+.dark-section .service-item:hover::after {
 	display: none !important;
 	content: none !important;
 	opacity: 0 !important;
@@ -5990,217 +5989,239 @@ header.main-header .header-sticky.active {
 	width: 0 !important;
 }
 
-/* Hide any remaining icons inside service-item */
-.service-item .icon-box,
-.service-item .service-icon-floating,
-.service-item .icon-box img,
-.service-item-media .service-icon-floating {
-	display: none !important;
-}
-
-/* Card Container */
+/* Card Outer Container */
 .service-item {
 	position: relative !important;
-	background: #141c24 !important;
-	border: 1px solid rgba(255, 255, 255, 0.1) !important;
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
-	border-radius: 18px !important;
-	padding: 16px !important;
+	background: #0E131F !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 22px !important;
+	padding: 0 !important;
 	margin-bottom: 30px !important;
 	height: calc(100% - 30px) !important;
-	min-height: 440px !important;
+	min-height: 460px !important;
 	display: flex !important;
 	flex-direction: column !important;
 	justify-content: space-between !important;
-	gap: 12px !important;
 	overflow: hidden !important;
-	transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4) !important;
+	transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
 	z-index: 1 !important;
 }
 
 .dark-section .service-item {
-	background: #141c24 !important;
-	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	background: #0E131F !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 .service-item:hover {
 	transform: translateY(-8px) !important;
-	border-color: #FA2083 !important;
-	box-shadow: 0 16px 38px rgba(250, 32, 131, 0.25) !important;
+	border-color: rgba(255, 30, 86, 0.45) !important;
+	box-shadow: 0 20px 48px rgba(255, 30, 86, 0.25) !important;
 }
 
-/* Image Container: STRICTLY FIXED 220px Height */
-.service-item-media {
+/* Media Area (Photo with Wave Divider at bottom) */
+.service-media-card {
 	position: relative !important;
 	width: 100% !important;
 	height: 220px !important;
 	min-height: 220px !important;
 	max-height: 220px !important;
-	border-radius: 14px !important;
 	overflow: hidden !important;
-	background: #0b1016 !important;
-	margin: 0 0 4px 0 !important;
+	background: #07090F !important;
 	flex-shrink: 0 !important;
 	display: block !important;
-	z-index: 2 !important;
+	border-top-left-radius: 22px !important;
+	border-top-right-radius: 22px !important;
 }
 
-.service-item-media figure {
+.service-media-card figure {
 	width: 100% !important;
 	height: 100% !important;
 	margin: 0 !important;
+	padding: 0 !important;
 	overflow: hidden !important;
 	display: block !important;
 }
 
-/* Service Image: Uniform Object-Fit Cover, Zoom on Hover */
-.service-item-media .service-img {
+.service-media-card .service-img {
 	width: 100% !important;
 	height: 100% !important;
 	min-height: 100% !important;
 	object-fit: cover !important;
 	object-position: center !important;
 	display: block !important;
-	transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 	opacity: 1 !important;
 	visibility: visible !important;
 }
 
-.service-item:hover .service-item-media .service-img {
+.service-item:hover .service-media-card .service-img {
 	transform: scale(1.08) !important;
 	opacity: 1 !important;
 	visibility: visible !important;
 }
 
-/* Category Badge on Top-Left of Image */
-.service-item-media .service-badge {
+/* Wave Curve Divider sitting at the bottom of the photo */
+.service-wave-divider {
 	position: absolute !important;
-	top: 12px !important;
-	left: 12px !important;
-	z-index: 5 !important;
-	background: rgba(10, 15, 25, 0.82) !important;
-	border: 1px solid rgba(255, 255, 255, 0.22) !important;
-	backdrop-filter: blur(8px) !important;
-	-webkit-backdrop-filter: blur(8px) !important;
-	padding: 5px 12px !important;
-	border-radius: 30px !important;
-	font-size: 11px !important;
-	font-weight: 700 !important;
-	letter-spacing: 0.6px !important;
-	color: #ffffff !important;
-	text-transform: uppercase !important;
-	display: inline-flex !important;
-	align-items: center !important;
-	gap: 6px !important;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35) !important;
+	bottom: -1px !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 52px !important;
+	z-index: 3 !important;
+	pointer-events: none !important;
 }
 
-.service-item-media .service-badge i {
-	color: #FA2083 !important;
-	font-size: 11px !important;
+.service-wave-divider svg {
+	display: block !important;
+	width: 100% !important;
+	height: 100% !important;
 }
 
-/* Service Title */
-.service-item-header {
-	margin: 6px 0 0 0 !important;
+.service-wave-divider .wave-bg {
+	fill: #0E131F !important;
+}
+
+.service-wave-divider .wave-line {
+	fill: none !important;
+	stroke: #FF1E56 !important;
+	stroke-width: 5px !important;
+	stroke-linecap: round !important;
+}
+
+/* Service Card Content Area */
+.service-content-card {
+	padding: 16px 22px 22px 22px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	flex-grow: 1 !important;
+	justify-content: space-between !important;
+	background: radial-gradient(circle at 100% 0%, rgba(255, 30, 86, 0.14) 0%, transparent 60%) !important;
 	position: relative !important;
 	z-index: 2 !important;
 }
 
-.service-item-header h2 {
-	font-size: 20px !important;
+/* Title Box */
+.service-title-box {
+	margin-bottom: 8px !important;
+}
+
+.service-title-box h2 {
+	font-size: 22px !important;
 	font-weight: 700 !important;
-	line-height: 1.35 !important;
+	line-height: 1.3 !important;
 	margin: 0 !important;
 	color: #ffffff !important;
 }
 
-.service-item-header h2 a {
+.service-title-box h2 a {
 	color: #ffffff !important;
 	text-decoration: none !important;
 	transition: color 0.3s ease !important;
 }
 
-.service-item:hover .service-item-header h2 a {
-	color: #FA2083 !important;
+.service-title-box h2 .text-pink {
+	color: #FF1E56 !important;
+	transition: color 0.3s ease !important;
 }
 
-/* Service Description: 3 Lines Max, Fixed Height for Perfect Alignment */
-.service-item-body {
-	position: relative !important;
-	z-index: 2 !important;
+.service-item:hover .service-title-box h2 a {
+	color: #ffffff !important;
+}
+
+/* Description */
+.service-desc-box {
+	margin-bottom: 6px !important;
 	flex-grow: 1 !important;
-	display: flex !important;
-	flex-direction: column !important;
-	justify-content: space-between !important;
 }
 
-.service-item-content {
-	margin: 6px 0 !important;
-}
-
-.service-item-content p {
-	font-size: 14px !important;
-	line-height: 1.6 !important;
-	color: rgba(255, 255, 255, 0.72) !important;
+.service-desc-box p {
+	font-size: 13.5px !important;
+	line-height: 1.55 !important;
+	color: #A6B0BE !important;
 	margin: 0 !important;
 	display: -webkit-box !important;
 	-webkit-line-clamp: 3 !important;
 	-webkit-box-orient: vertical !important;
 	overflow: hidden !important;
-	min-height: 66px !important;
-	max-height: 66px !important;
+	min-height: 62px !important;
+	max-height: 62px !important;
+	transition: color 0.3s ease !important;
 }
 
-.service-item:hover .service-item-content p {
-	color: rgba(255, 255, 255, 0.9) !important;
+.service-item:hover .service-desc-box p {
+	color: #D3D8E2 !important;
 }
 
-/* Service Footer: Price and Book Button */
-.service-item-btn {
-	border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-	padding-top: 14px !important;
-	margin-top: auto !important;
+/* Small Pink Accent Bar below description */
+.service-accent-bar {
+	width: 38px !important;
+	height: 3px !important;
+	background: #FF1E56 !important;
+	border-radius: 2px !important;
+	margin: 10px 0 18px 0 !important;
+}
+
+/* Bottom Action Row (Price & Button) */
+.service-action-row {
 	display: flex !important;
 	align-items: center !important;
 	justify-content: space-between !important;
-	position: relative !important;
-	z-index: 2 !important;
+	gap: 10px !important;
+	margin-top: auto !important;
+	padding-top: 4px !important;
 }
 
-.service-item-btn .service-price {
-	font-size: 18px !important;
-	font-weight: 800 !important;
-	color: #FA2083 !important;
-	letter-spacing: 0.2px !important;
+/* Price Pill (Left) */
+.service-price-pill {
+	background: rgba(255, 30, 86, 0.15) !important;
+	border: 1px solid rgba(255, 30, 86, 0.3) !important;
+	border-radius: 25px !important;
+	padding: 7px 16px !important;
+	color: #ffffff !important;
+	font-size: 15px !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.3px !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	white-space: nowrap !important;
 }
 
-.service-item:hover .service-price {
-	color: #FA2083 !important;
-}
-
-.service-item-btn .readmore-btn {
+/* Book Now Button (Right) */
+.service-book-btn {
+	background: #FF1E56 !important;
+	color: #ffffff !important;
+	font-size: 13.5px !important;
+	font-weight: 700 !important;
+	padding: 8px 18px !important;
+	border-radius: 25px !important;
 	display: inline-flex !important;
 	align-items: center !important;
 	gap: 8px !important;
-	padding: 7px 18px !important;
-	border-radius: 30px !important;
-	background: rgba(250, 32, 131, 0.12) !important;
-	border: 1px solid rgba(250, 32, 131, 0.35) !important;
-	color: #ffffff !important;
-	font-size: 13px !important;
-	font-weight: 600 !important;
 	text-decoration: none !important;
+	box-shadow: 0 4px 15px rgba(255, 30, 86, 0.45) !important;
 	transition: all 0.3s ease !important;
+	white-space: nowrap !important;
+	border: none !important;
 }
 
-.service-item:hover .service-item-btn .readmore-btn {
+.service-book-btn:hover {
 	background: #FA2083 !important;
-	border-color: #FA2083 !important;
 	color: #ffffff !important;
-	box-shadow: 0 4px 15px rgba(250, 32, 131, 0.4) !important;
+	transform: translateY(-2px) !important;
+	box-shadow: 0 6px 20px rgba(255, 30, 86, 0.65) !important;
 }
 
-.service-item-btn .readmore-btn::before {
+.service-book-btn i {
+	font-size: 13px !important;
+	transition: transform 0.25s ease !important;
+}
+
+.service-book-btn:hover i {
+	transform: translateX(4px) !important;
+}
+
+.service-book-btn::before {
 	display: none !important;
 }
