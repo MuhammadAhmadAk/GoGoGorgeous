@@ -176,7 +176,7 @@
                     <div class="approach-item wow fadeInUp">
                         <div class="approach-item-image">
                             <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/our-approach-item-image-1.jpg') }}"
+                                <img src="{{ \App\Models\SiteSetting::get('approach_image_1') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('approach_image_1'))) : asset('frontend/images/our-approach-item-image-1.jpg') }}"
                                     alt="Precision Treatment">
                             </figure>
                         </div>
@@ -198,7 +198,7 @@
                     <div class="approach-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="approach-item-image">
                             <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/our-approach-item-image-2.jpg') }}"
+                                <img src="{{ \App\Models\SiteSetting::get('approach_image_2') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('approach_image_2'))) : asset('frontend/images/our-approach-item-image-2.jpg') }}"
                                     alt="Finishing & Styling">
                             </figure>
                         </div>
@@ -220,7 +220,7 @@
                     <div class="approach-item wow fadeInUp" data-wow-delay="0.4s">
                         <div class="approach-item-image">
                             <figure class="image-anime">
-                                <img src="{{ asset('frontend/images/our-approach-item-image-3.jpg') }}"
+                                <img src="{{ \App\Models\SiteSetting::get('approach_image_3') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('approach_image_3'))) : asset('frontend/images/our-approach-item-image-3.jpg') }}"
                                     alt="Aftercare Advice">
                             </figure>
                         </div>
@@ -1013,4 +1013,5 @@
 
 
 @endsection
+
 

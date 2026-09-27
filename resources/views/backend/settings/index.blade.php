@@ -44,6 +44,27 @@
                     <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['why_choose_us_image'])) }}" width="150" class="mt-2" style="border-radius:5px;">
                 @endif
             </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Skin Care Card 1 Image</label>
+                <input type="file" name="approach_image_1" class="form-control">
+                @if(isset($settings['approach_image_1']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['approach_image_1'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Skin Care Card 2 Image</label>
+                <input type="file" name="approach_image_2" class="form-control">
+                @if(isset($settings['approach_image_2']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['approach_image_2'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Skin Care Card 3 Image</label>
+                <input type="file" name="approach_image_3" class="form-control">
+                @if(isset($settings['approach_image_3']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['approach_image_3'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Clinic Name / Hero Title</label>
                 <input type="text" name="hero_title" class="form-control" value="{{ $settings['hero_title'] ?? 'Go Go Gorgeous' }}">
@@ -83,4 +104,5 @@
         </button>
     </form>
 @endsection
+
 

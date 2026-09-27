@@ -38,6 +38,18 @@ class SettingController extends Controller
             $path = $request->file('why_choose_us_image')->store('uploads/settings', 'public');
             $data['why_choose_us_image'] = $path;
         }
+        if ($request->hasFile('approach_image_1')) {
+            $path = $request->file('approach_image_1')->store('uploads/settings', 'public');
+            $data['approach_image_1'] = $path;
+        }
+        if ($request->hasFile('approach_image_2')) {
+            $path = $request->file('approach_image_2')->store('uploads/settings', 'public');
+            $data['approach_image_2'] = $path;
+        }
+        if ($request->hasFile('approach_image_3')) {
+            $path = $request->file('approach_image_3')->store('uploads/settings', 'public');
+            $data['approach_image_3'] = $path;
+        }
 
         foreach ($data as $key => $value) {
             SiteSetting::updateOrCreate(
@@ -49,3 +61,4 @@ class SettingController extends Controller
         return redirect()->route('admin.settings.index')->with('success', 'Site settings updated successfully.');
     }
 }
+
