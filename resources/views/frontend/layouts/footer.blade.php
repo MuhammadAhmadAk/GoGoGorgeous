@@ -184,7 +184,7 @@
 <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
 <!-- Main Custom js file -->
 <script src="{{ asset('frontend/js/function.js') }}"></script>
-<script src="{{ asset('frontend/js/theme-panel-dynamic.js') }}"></script>
+
 </body>
 
 </html>
