@@ -8,6 +8,10 @@
             <input type="text" name="title" class="form-control" required>
         </div>
         <div class="mb-3">
+            <label>Category / Tag (e.g. HAIR CARE, SKIN CARE)</label>
+            <input type="text" name="category" class="form-control">
+        </div>
+        <div class="mb-3">
             <label>Description</label>
             <textarea name="description" class="form-control" rows="3"></textarea>
         </div>
