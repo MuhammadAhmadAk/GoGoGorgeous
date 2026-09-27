@@ -66,7 +66,7 @@ class Service extends Model
 
     public function getFeaturedImageUrlAttribute()
     {
-        $v = "?v=3";
+        $v = "?v=4";
         if (!$this->featured_image) {
             return asset('frontend/images/services/hair_color.jpg') . $v;
         }
