@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Eyebrow Threading: Perfectly shaped arched eyebrow with twisted cotton thread -->
+  <path d="M12 44C20 34 36 30 48 33C58 35.5 66 43 70 48C64 45 54 39 46 38C34 36.5 22 40 12 44Z" fill="#FA2083" fill-opacity="0.25" stroke="#FA2083" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M22 40C24 37 27 36 29 36" stroke="#FA2083" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M33 36C35 34 38 33.5 41 34" stroke="#FA2083" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M46 35C49 35 52 36.5 55 39" stroke="#FA2083" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M16 16L38 48L62 16" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M16 66L38 48L62 66" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="38" cy="48" r="2.5" fill="#FA2083"/>
+  <path d="M56 26L57 28.5L59.5 29.5L57 30.5L56 33L55 30.5L52.5 29.5L55 28.5L56 26Z" fill="#00A2FB"/>
+  <path d="M24 24L24.8 26L26.8 26.8L24.8 27.6L24 29.6L23.2 27.6L21.2 26.8L23.2 26L24 24Z" fill="#FA2083"/>
+</svg>

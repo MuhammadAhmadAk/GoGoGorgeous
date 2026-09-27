@@ -1,0 +1,17 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Skin Rejuvenation (IPL): Dermal cellular regeneration layers with penetrating pulsed light spectrum & renewal badge -->
+  <path d="M12 36C20 34 28 38 36 36C44 34 52 38 60 36C64 35 66 35 68 36" stroke="#FA2083" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M12 48C20 46 28 50 36 48C44 46 52 50 60 48C64 47 66 47 68 48" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="4 3"/>
+  <path d="M12 60C20 58 28 62 36 60C44 58 52 62 60 60C64 59 66 59 68 60" stroke="#132130" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="24" cy="54" r="3" fill="#FA2083" fill-opacity="0.3" stroke="#FA2083" stroke-width="1.8"/>
+  <circle cx="40" cy="54" r="3.5" fill="#FA2083" stroke="#FA2083" stroke-width="1.8"/>
+  <circle cx="56" cy="54" r="3" fill="#FA2083" fill-opacity="0.3" stroke="#FA2083" stroke-width="1.8"/>
+  <circle cx="32" cy="42" r="2.5" stroke="#00A2FB" stroke-width="1.8"/>
+  <circle cx="48" cy="42" r="2.5" stroke="#00A2FB" stroke-width="1.8"/>
+  <path d="M30 12L38 34" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M40 10L40 34" stroke="#FA2083" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M50 12L42 34" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M40 22L42 26L46 28L42 30L40 34L38 30L34 28L38 26L40 22Z" fill="#FA2083"/>
+  <path d="M18 20L19 22.5L21.5 23.5L19 24.5L18 27L17 24.5L14.5 23.5L17 22.5L18 20Z" fill="#00A2FB"/>
+  <path d="M62 20L63 22.5L65.5 23.5L63 24.5L62 27L61 24.5L58.5 23.5L61 22.5L62 20Z" fill="#00A2FB"/>
+</svg>

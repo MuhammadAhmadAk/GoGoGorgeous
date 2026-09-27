@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Deep Conditioning Hair Serum Dropper, Moisture Drop, and Silky Hair Strand -->
+  <rect x="16" y="32" width="22" height="34" rx="4" stroke="#FA2083" stroke-width="2.5"/>
+  <rect x="22" y="26" width="10" height="6" stroke="#00A2FB" stroke-width="2.2"/>
+  <path d="M24 26C24 22 25 18 27 18C29 18 30 22 30 26" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="21" y1="44" x2="33" y2="44" stroke="#FA2083" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="21" y1="50" x2="29" y2="50" stroke="#FA2083" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="27" cy="58" r="2" fill="#00A2FB"/>
+  <path d="M46 16L40 26H46L46 36L44 40H48L46 36V16" stroke="#00A2FB" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M46 48C46 48 40 56 40 59.5C40 62.8 42.7 65.5 46 65.5C49.3 65.5 52 62.8 52 59.5C52 56 46 48 46 48Z" fill="#FA2083" fill-opacity="0.25" stroke="#FA2083" stroke-width="2.4"/>
+  <path d="M60 22C64 30 56 40 62 50C66 56 64 64 62 68" stroke="#00A2FB" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M66 26C70 34 63 42 68 52C71 58 69 64 68 68" stroke="#00A2FB" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M54 18L55 21L58 22L55 23L54 26L53 23L50 22L53 21L54 18Z" fill="#FA2083"/>
+  <path d="M68 14L69 16L71 17L69 18L68 20L67 18L65 17L67 16L68 14Z" fill="#00A2FB"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Head Massage relaxing head profile with soothing hands & energy waves -->
+  <path d="M28 66C28 66 30 52 38 48C46 44 48 36 48 30C48 20 40 16 32 18C25 19.5 22 25 22 32C22 36 24 40 26 42L22 66" stroke="#FA2083" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 20C15 20 18 22 21 25" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M10 26C14 26 18 27 22 29" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M11 32C15 32 18 33 21 34" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M52 14C48 16 43 17 38 16" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M54 20C49 22 45 22 41 21" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M56 26C51 27 47 26 44 24" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M54 36C58 37 61 40 61 44C61 48 57 51 53 51" stroke="#FA2083" stroke-width="2" stroke-linecap="round"/>
+  <path d="M60 32C66 34 70 39 70 45C70 51 65 56 59 57" stroke="#00A2FB" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3 3"/>
+  <path d="M40 8L41 11L44 12L41 13L40 16L39 13L36 12L39 11L40 8Z" fill="#FA2083"/>
+  <path d="M58 8L59 10L61 11L59 12L58 14L57 12L55 11L57 10L58 8Z" fill="#00A2FB"/>
+</svg>

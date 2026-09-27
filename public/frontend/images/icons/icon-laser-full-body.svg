@@ -1,0 +1,19 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Full Body Laser Hair Removal: Silhouette body with high-tech laser handpiece targeting full body -->
+  <!-- Sleek Body Line -->
+  <path d="M24 16C21 22 18 30 20 40C22 50 19 60 16 68C20 68 25 64 27 58C30 50 29 40 27 30C26 22 25 16 24 16Z" fill="#00A2FB" fill-opacity="0.15" stroke="#00A2FB" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Laser Handpiece Apparatus -->
+  <path d="M52 10L66 24L58 32L52 26L44 34L38 28L44 22L38 16L48 6L52 10Z" fill="#FA2083" fill-opacity="0.18" stroke="#FA2083" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M38 28L32 34L36 38L42 32" stroke="#FA2083" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- Concentrated Laser Beam Rays -->
+  <path d="M32 34L18 48" stroke="#FA2083" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M28 31L14 45" stroke="#00A2FB" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <path d="M35 38L21 52" stroke="#00A2FB" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <!-- Hair Follicle Pulse Effect -->
+  <circle cx="18" cy="48" r="4" stroke="#FA2083" stroke-width="1.8"/>
+  <circle cx="18" cy="48" r="1.5" fill="#FA2083"/>
+  <!-- Technology / Laser Sparkles -->
+  <path d="M54 46L55.5 49L58.5 50.5L55.5 52L54 55L52.5 52L49.5 50.5L52.5 49L54 46Z" fill="#00A2FB"/>
+  <path d="M38 60L39.5 62.5L42.5 63.5L39.5 64.5L38 67L36.5 64.5L33.5 63.5L36.5 62.5L38 60Z" fill="#FA2083"/>
+  <path d="M64 40L65 42L67 43L65 44L64 46L63 44L61 43L63 42L64 40Z" fill="#00A2FB"/>
+</svg>

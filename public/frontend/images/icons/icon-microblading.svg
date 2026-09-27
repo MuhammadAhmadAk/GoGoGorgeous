@@ -1,0 +1,16 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Microblading: Microblade pen tool drawing precise realistic hair strokes on arched eyebrow -->
+  <path d="M10 54C20 46 34 43 46 45C56 47 64 53 68 58C62 55 54 50 46 49C34 48 22 51 10 54Z" fill="#FA2083" fill-opacity="0.15" stroke="#FA2083" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M16 52C18 49 20 47 22 47" stroke="#FA2083" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M24 49C26 46 29 45 32 46" stroke="#FA2083" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M33 47C36 44 39 44 42 45" stroke="#FA2083" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M43 46C46 45 49 46 52 48" stroke="#FA2083" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M53 48C56 49 59 52 61 54" stroke="#FA2083" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M68 12L42 38L37 37L35 42L61 68" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 12L70 14L46 40L42 38L68 12Z" fill="#00A2FB" fill-opacity="0.2" stroke="#00A2FB" stroke-width="2"/>
+  <path d="M35 42L28 47L33 49L37 44" fill="#00A2FB" stroke="#00A2FB" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="28" y1="47" x2="30" y2="44" stroke="#00A2FB" stroke-width="1.5"/>
+  <line x1="30" y1="48" x2="32" y2="45" stroke="#00A2FB" stroke-width="1.5"/>
+  <path d="M22 28L23 30.5L25.5 31.5L23 32.5L22 35L21 32.5L18.5 31.5L21 30.5L22 28Z" fill="#FA2083"/>
+  <path d="M52 22L53 24.5L55.5 25.5L53 26.5L52 29L51 26.5L48.5 25.5L51 24.5L52 22Z" fill="#00A2FB"/>
+</svg>

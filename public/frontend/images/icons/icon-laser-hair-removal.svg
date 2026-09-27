@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Laser Hair Removal: Laser Handpiece / Wand targeting hair follicle with concentrated pulse beam -->
+  <path d="M52 10L68 26L58 36L52 30L44 38L36 30L44 22L38 16L48 6L52 10Z" fill="#00A2FB" fill-opacity="0.15" stroke="#00A2FB" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M36 30L30 36L34 40L40 34" stroke="#00A2FB" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M30 36L18 52" stroke="#FA2083" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M26 33L14 49" stroke="#FA2083" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <path d="M33 40L21 56" stroke="#FA2083" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 2"/>
+  <path d="M8 58C18 58 24 58 36 58C48 58 60 58 72 58" stroke="#132130" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M18 52C18 52 17 56 16 62C15 67 18 70 21 70C24 70 26 67 24 62L22 58" stroke="#FA2083" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="21" cy="66" r="3" fill="#FA2083"/>
+  <path d="M20 50L22 45L27 47L22 49L20 54L18 49L13 47L18 45L20 50Z" fill="#00A2FB"/>
+  <path d="M60 48L61 50.5L63.5 51.5L61 52.5L60 55L59 52.5L56.5 51.5L59 50.5L60 48Z" fill="#FA2083"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Body Massage: Full body back massage, therapeutic hands, hot basalt stones & relaxing lotus -->
+  <path d="M12 56C16 52 24 50 34 50C44 50 56 48 68 54" stroke="#132130" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="16" cy="46" r="6" stroke="#FA2083" stroke-width="2.2"/>
+  <path d="M30 26C30 26 34 36 34 42" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M26 34C28 38 30 42 34 44" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M36 34C37 38 36 42 35 44" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M46 24C46 24 48 34 48 40" stroke="#00A2FB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M42 32C44 36 46 40 48 42" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M52 32C52 36 50 40 49 42" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <ellipse cx="60" cy="44" rx="6" ry="2.5" fill="#FA2083" stroke="#FA2083" stroke-width="1.8"/>
+  <ellipse cx="60" cy="39" rx="4.5" ry="2" fill="#FA2083" stroke="#FA2083" stroke-width="1.8"/>
+  <ellipse cx="60" cy="35" rx="3" ry="1.5" fill="#FA2083" stroke="#FA2083" stroke-width="1.8"/>
+  <path d="M60 28C59 25 61 22 60 19" stroke="#00A2FB" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M64 29C63 26 65 23 64 20" stroke="#00A2FB" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M40 64C36 58 32 60 32 64C32 68 40 72 40 72C40 72 48 68 48 64C48 60 44 58 40 64Z" fill="#FA2083" fill-opacity="0.2" stroke="#FA2083" stroke-width="1.8"/>
+  <path d="M22 18L23 20.5L25.5 21.5L23 22.5L22 25L21 22.5L18.5 21.5L21 20.5L22 18Z" fill="#FA2083"/>
+  <path d="M68 14L69 16L71 17L69 18L68 20L67 18L65 17L67 16L68 14Z" fill="#00A2FB"/>
+</svg>

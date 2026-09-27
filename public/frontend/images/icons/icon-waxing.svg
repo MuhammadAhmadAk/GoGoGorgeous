@@ -1,0 +1,11 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Waxing: Warm wax container / pot, wooden spatula with honey wax drip & wax strip -->
+  <path d="M16 40C16 38 18 36 21 36H53C56 36 58 38 58 40V62C58 66 55 69 50 69H24C19 69 16 66 16 62V40Z" stroke="#FA2083" stroke-width="2.5" stroke-linejoin="round"/>
+  <rect x="13" y="32" width="48" height="6" rx="3" fill="#FA2083" fill-opacity="0.2" stroke="#FA2083" stroke-width="2.2"/>
+  <path d="M26 52C28 50 30 50 32 52C34 54 36 54 38 52" stroke="#00A2FB" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M26 58C28 56 30 56 32 58C34 60 36 60 38 58" stroke="#00A2FB" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M68 12L40 44" stroke="#00A2FB" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42 42C40 46 38 50 40 54C42 57 46 57 47 54C48 50 44 44 42 42Z" fill="#FA2083" stroke="#FA2083" stroke-width="1.8"/>
+  <path d="M44 60C44 60 42 63 42 64.5C42 65.8 43 67 44.5 67C46 67 47 65.8 47 64.5C47 63 44 60 44 60Z" fill="#FA2083"/>
+  <rect x="62" y="36" width="10" height="28" rx="2" stroke="#00A2FB" stroke-width="2" stroke-dasharray="3 2"/>
+</svg>

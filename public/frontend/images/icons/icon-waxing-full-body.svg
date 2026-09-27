@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Waxing Full Body: Elegant body silhouette with waxing spatula, honey wax drip & smooth glow -->
+  <path d="M26 14C23 18 20 25 22 34C24 43 21 54 18 64C17 67 19 70 23 70C28 70 32 64 34 56C36 48 35 38 33 28C32 20 30 14 26 14Z" fill="#00A2FB" fill-opacity="0.12" stroke="#00A2FB" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M38 48C41 46 45 46 48 48C51 50 54 50 57 48" stroke="#00A2FB" stroke-width="2" stroke-linecap="round"/>
+  <path d="M42 54C45 52 48 52 51 54C53 56 56 56 58 54" stroke="#00A2FB" stroke-width="2" stroke-linecap="round"/>
+  <!-- Waxing Spatula -->
+  <path d="M68 14L44 42" stroke="#FA2083" stroke-width="3" stroke-linecap="round"/>
+  <path d="M46 39C43 43 40 47 42 51C44 54 48 54 49 51C51 47 48 41 46 39Z" fill="#FA2083" stroke="#FA2083" stroke-width="1.8"/>
+  <path d="M45 57C45 57 43 60 43 61.5C43 62.8 44 64 45.5 64C47 64 48 62.8 48 61.5C48 60 45 57 45 57Z" fill="#FA2083"/>
+  <!-- Wax Strip -->
+  <rect x="52" y="24" width="14" height="28" rx="2" stroke="#FA2083" stroke-width="2" stroke-dasharray="3 2" transform="rotate(15 52 24)"/>
+  <!-- Sparkles -->
+  <path d="M14 22L15.5 25L18.5 26.5L15.5 28L14 31L12.5 28L9.5 26.5L12.5 25L14 22Z" fill="#FA2083"/>
+  <path d="M60 62L61 64.5L63.5 65.5L61 66.5L60 69L59 66.5L56.5 65.5L59 64.5L60 62Z" fill="#00A2FB"/>
+</svg>

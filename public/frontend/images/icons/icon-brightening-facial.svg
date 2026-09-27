@@ -1,0 +1,17 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brightening Facial: Illuminated glowing radiant face with brilliance rays & sparkles -->
+  <line x1="40" y1="8" x2="40" y2="14" stroke="#FA2083" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="20" y1="16" x2="24" y2="21" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="60" y1="16" x2="56" y2="21" stroke="#00A2FB" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="12" y1="36" x2="18" y2="36" stroke="#FA2083" stroke-width="2.2" stroke-linecap="round"/>
+  <line x1="68" y1="36" x2="62" y2="36" stroke="#FA2083" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M26 34C26 24 32 18 40 18C48 18 54 24 54 34C54 48 48 60 40 66C32 60 26 48 26 34Z" stroke="#FA2083" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M31 36C33 39 36 39 38 36" stroke="#00A2FB" stroke-width="2" stroke-linecap="round"/>
+  <path d="M42 36C44 39 47 39 49 36" stroke="#00A2FB" stroke-width="2" stroke-linecap="round"/>
+  <path d="M37 47C39 49 41 49 43 47" stroke="#FA2083" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 44L33 46.5L35.5 47.5L33 48.5L32 51L31 48.5L28.5 47.5L31 46.5L32 44Z" fill="#00A2FB"/>
+  <path d="M48 44L49 46.5L51.5 47.5L49 48.5L48 51L47 48.5L44.5 47.5L47 46.5L48 44Z" fill="#00A2FB"/>
+  <path d="M40 22L41.5 26.5L46 28L41.5 29.5L40 34L38.5 29.5L34 28L38.5 26.5L40 22Z" fill="#FA2083"/>
+  <path d="M62 52L63 54L65 55L63 56L62 58L61 56L59 55L61 54L62 52Z" fill="#FA2083"/>
+  <path d="M18 52L19 54L21 55L19 56L18 58L17 56L15 55L17 54L18 52Z" fill="#FA2083"/>
+</svg>

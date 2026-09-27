@@ -1,0 +1,50 @@
+@extends('backend.layouts.app')
+@section('page_title', 'Site Settings')
+
+@section('content')
+    <div class="d-flex justify-content-between mb-3">
+        <h2>Site Settings</h2>
+    </div>
+
+    <form action="{{ route('admin.settings.update') }}" method="POST">
+        @csrf
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Clinic Name / Hero Title</label>
+                <input type="text" name="hero_title" class="form-control" value="{{ $settings['hero_title'] ?? 'Go Go Gorgeous' }}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="text" name="phone" class="form-control" value="{{ $settings['phone'] ?? '+1 234 567 890' }}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" name="email" class="form-control" value="{{ $settings['email'] ?? 'info@gogorgeous.com' }}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Clinic Address</label>
+                <input type="text" name="address" class="form-control" value="{{ $settings['address'] ?? '123 Beauty Lane, NY' }}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Opening Hours</label>
+                <input type="text" name="opening_hours" class="form-control" value="{{ $settings['opening_hours'] ?? 'Mon-Sat: 9AM - 8PM' }}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Facebook URL</label>
+                <input type="url" name="facebook_url" class="form-control" value="{{ $settings['facebook_url'] ?? '#' }}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Instagram URL</label>
+                <input type="url" name="instagram_url" class="form-control" value="{{ $settings['instagram_url'] ?? '#' }}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Twitter URL</label>
+                <input type="url" name="twitter_url" class="form-control" value="{{ $settings['twitter_url'] ?? '#' }}">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">
+            <i class="fa-solid fa-save me-2"></i> Save Settings
+        </button>
+    </form>
+@endsection
