@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Email Address</label>
-                <input type="email" name="email" class="form-control" value="{{ $settings['email'] ?? 'info@gogorgeous.com' }}">
+                <input type="text" name="email" class="form-control" value="{{ $settings['email'] ?? 'info@gogorgeous.com' }}">
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Clinic Address</label>
@@ -45,15 +45,15 @@
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Facebook URL</label>
-                <input type="url" name="facebook_url" class="form-control" value="{{ $settings['facebook_url'] ?? '#' }}">
+                <input type="text" name="facebook_url" class="form-control" value="{{ $settings['facebook_url'] ?? '#' }}">
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Instagram URL</label>
-                <input type="url" name="instagram_url" class="form-control" value="{{ $settings['instagram_url'] ?? '#' }}">
+                <input type="text" name="instagram_url" class="form-control" value="{{ $settings['instagram_url'] ?? '#' }}">
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Twitter URL</label>
-                <input type="url" name="twitter_url" class="form-control" value="{{ $settings['twitter_url'] ?? '#' }}">
+                <input type="text" name="twitter_url" class="form-control" value="{{ $settings['twitter_url'] ?? '#' }}">
             </div>
         </div>
 
