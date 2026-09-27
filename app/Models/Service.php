@@ -66,15 +66,16 @@ class Service extends Model
 
     public function getFeaturedImageUrlAttribute()
     {
+        $v = "?v=2";
         if (!$this->featured_image) {
-            return asset('frontend/images/services/hair_color.jpg');
+            return asset('frontend/images/services/hair_color.jpg') . $v;
         }
         if (str_starts_with($this->featured_image, 'http://') || str_starts_with($this->featured_image, 'https://')) {
             return $this->featured_image;
         }
         if (file_exists(public_path($this->featured_image))) {
-            return asset($this->featured_image);
+            return asset($this->featured_image) . $v;
         }
-        return asset('storage/' . $this->featured_image);
+        return asset('storage/' . $this->featured_image) . $v;
     }
 }

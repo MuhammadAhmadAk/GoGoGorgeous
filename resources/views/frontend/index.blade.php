@@ -80,7 +80,7 @@
                             <!-- About Us Image Start -->
                             <div class="about-us-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/about/2.jpg') }}" alt="">
+                                    <img src="{{ asset('frontend/images/about/2.jpg') . '?v=2' }}" alt="">
                                 </figure>
                             </div>
                             <!-- About Us Image End -->
@@ -100,7 +100,7 @@
                             <!-- About Us Image Start -->
                             <div class="about-us-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/about/1.jpg') }}" alt="">
+                                    <img src="{{ asset('frontend/images/about/1.jpg') . '?v=2' }}" alt="">
                                 </figure>
                             </div>
                             <!-- About Us Image End -->
@@ -427,7 +427,7 @@
                         <div class="pricing-item wow fadeInUp">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/hair_color.jpg') }}" alt="Hair Color">
+                                    <img src="{{ asset('frontend/images/services/hair_color.jpg') . '?v=2' }}" alt="Hair Color">
                                 </figure>
                             </div>
                             <div class="pricing-item-body">
@@ -446,7 +446,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.1s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/hair_cut.jpg') }}" alt="Hair Cut">
+                                    <img src="{{ asset('frontend/images/services/hair_cut.jpg') . '?v=2' }}" alt="Hair Cut">
                                 </figure>
                             </div>
                             <div class="pricing-item-body">
@@ -465,7 +465,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.2s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/head_massage.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/head_massage.jpg') . '?v=2' }}"
                                         alt="Head Massage">
                                 </figure>
                             </div>
@@ -485,7 +485,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.3s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/deep_conditioning.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/deep_conditioning.jpg') . '?v=2' }}"
                                         alt="Deep Conditioning">
                                 </figure>
                             </div>
@@ -505,7 +505,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.4s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/highlights.jpg') }}" alt="Highlights">
+                                    <img src="{{ asset('frontend/images/services/highlights.jpg') . '?v=2' }}" alt="Highlights">
                                 </figure>
                             </div>
                             <div class="pricing-item-body">
@@ -524,7 +524,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.5s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/eyebrow_threading.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/eyebrow_threading.jpg') . '?v=2' }}"
                                         alt="Eyebrow Threading">
                                 </figure>
                             </div>
@@ -544,7 +544,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.6s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/waxing_full_body.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/waxing_full_body.jpg') . '?v=2' }}"
                                         alt="Waxing Full Body">
                                 </figure>
                             </div>
@@ -564,7 +564,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.7s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/waxing_full_face.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/waxing_full_face.jpg') . '?v=2' }}"
                                         alt="Waxing Full Face">
                                 </figure>
                             </div>
@@ -584,7 +584,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.8s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/facials.jpg') }}" alt="Facials">
+                                    <img src="{{ asset('frontend/images/services/facials.jpg') . '?v=2' }}" alt="Facials">
                                 </figure>
                             </div>
                             <div class="pricing-item-body">
@@ -603,7 +603,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="0.9s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/brightening_facial.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/brightening_facial.jpg') . '?v=2' }}"
                                         alt="Brightening Facial">
                                 </figure>
                             </div>
@@ -623,7 +623,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="1s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/anti-aging_facial.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/anti-aging_facial.jpg') . '?v=2' }}"
                                         alt="Anti-Aging Facial">
                                 </figure>
                             </div>
@@ -643,7 +643,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="1.1s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/laser_hair_removal_full_body.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/laser_hair_removal_full_body.jpg') . '?v=2' }}"
                                         alt="Full Body Laser Hair Removal">
                                 </figure>
                             </div>
@@ -663,7 +663,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="1.2s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/laser_hair_removal_face.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/laser_hair_removal_face.jpg') . '?v=2' }}"
                                         alt="Laser Hair Removal Face">
                                 </figure>
                             </div>
@@ -683,7 +683,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="1.3s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/photo_facial.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/photo_facial.jpg') . '?v=2' }}"
                                         alt="Photo Facial">
                                 </figure>
                             </div>
@@ -703,7 +703,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="1.4s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/skin_rejuvenation_IPL.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/skin_rejuvenation_IPL.jpg') . '?v=2' }}"
                                         alt="Skin Rejuvenation IPL">
                                 </figure>
                             </div>
@@ -723,7 +723,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="1.5s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/microblading.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/microblading.jpg') . '?v=2' }}"
                                         alt="Microblading">
                                 </figure>
                             </div>
@@ -743,7 +743,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="1.6s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/body_massage.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/body_massage.jpg') . '?v=2' }}"
                                         alt="Body Massage">
                                 </figure>
                             </div>
@@ -763,7 +763,7 @@
                         <div class="pricing-item wow fadeInUp" data-wow-delay="1.7s">
                             <div class="pricing-item-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/services/makeup_hair_style.jpg') }}"
+                                    <img src="{{ asset('frontend/images/services/makeup_hair_style.jpg') . '?v=2' }}"
                                         alt="Make Up & Hair Style">
                                 </figure>
                             </div>
