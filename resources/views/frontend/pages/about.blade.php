@@ -44,7 +44,7 @@
                             <!-- About Us Image Start -->
                             <div class="about-us-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/about/2.jpg') }}" alt="">
+                                    <img src="{{ \App\Models\SiteSetting::get('about_image_2') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('about_image_2'))) : asset('frontend/images/about/2.jpg') }}" alt="">
                                 </figure>
                             </div>
                             <!-- About Us Image End -->
@@ -64,7 +64,7 @@
                             <!-- About Us Image Start -->
                             <div class="about-us-image">
                                 <figure class="image-anime">
-                                    <img src="{{ asset('frontend/images/about/1.jpg') }}" alt="">
+                                    <img src="{{ \App\Models\SiteSetting::get('about_image_1') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('about_image_1'))) : asset('frontend/images/about/1.jpg') }}" alt="">
                                 </figure>
                             </div>
                             <!-- About Us Image End -->

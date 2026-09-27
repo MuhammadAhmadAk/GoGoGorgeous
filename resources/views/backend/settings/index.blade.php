@@ -6,9 +6,23 @@
         <h2>Site Settings</h2>
     </div>
 
-    <form action="{{ route('admin.settings.update') }}" method="POST">
+    <form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">About Section Image 1</label>
+                <input type="file" name="about_image_1" class="form-control">
+                @if(isset($settings['about_image_1']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['about_image_1'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">About Section Image 2</label>
+                <input type="file" name="about_image_2" class="form-control">
+                @if(isset($settings['about_image_2']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['about_image_2'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Clinic Name / Hero Title</label>
                 <input type="text" name="hero_title" class="form-control" value="{{ $settings['hero_title'] ?? 'Go Go Gorgeous' }}">

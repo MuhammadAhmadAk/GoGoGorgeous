@@ -18,6 +18,15 @@ class SettingController extends Controller
     {
         $data = $request->except(['_token', '_method']);
 
+        if ($request->hasFile('about_image_1')) {
+            $path = $request->file('about_image_1')->store('uploads/settings', 'public');
+            $data['about_image_1'] = $path;
+        }
+        if ($request->hasFile('about_image_2')) {
+            $path = $request->file('about_image_2')->store('uploads/settings', 'public');
+            $data['about_image_2'] = $path;
+        }
+
         foreach ($data as $key => $value) {
             SiteSetting::updateOrCreate(
                 ['key' => $key],
