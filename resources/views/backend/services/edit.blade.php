@@ -11,13 +11,7 @@
             <label>Description</label>
             <textarea name="description" class="form-control" rows="3">{{ $service->description }}</textarea>
         </div>
-        <div class="mb-3">
-            <label>Icon (Optional)</label>
-            <input type="file" name="icon_image" class="form-control">
-            @if($service->icon_image)
-                <img src="{{ $service->icon_url }}" width="50" class="mt-2">
-            @endif
-        </div>
+
         <div class="mb-3">
             <label>Service Image (Before/After or Main Photo)</label>
             <input type="file" name="featured_image" class="form-control">
