@@ -5973,121 +5973,234 @@ header.main-header .header-sticky.active {
 }
 
 /* =========================================================
-   Service Card Real Human Photo & Transformation Styling
+   Service Card Luxury Redesign: Real Human Photos, NO Icons,
+   Fixed Uniform Aspect Ratio, Stays 100% Visible on Hover
    ========================================================= */
-.service-item {
-	padding: 22px !important;
-	gap: 16px !important;
-	min-height: auto !important;
-	border-radius: 20px !important;
+
+/* Neutralize old pink overlay completely */
+.service-item::before,
+.service-item:hover:before,
+.dark-section .service-item::before,
+.dark-section .service-item:hover:before {
+	display: none !important;
+	content: none !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	width: 0 !important;
 }
 
+/* Hide any remaining icons inside service-item */
+.service-item .icon-box,
+.service-item .service-icon-floating,
+.service-item .icon-box img,
+.service-item-media .service-icon-floating {
+	display: none !important;
+}
+
+/* Card Container */
+.service-item {
+	position: relative !important;
+	background: #141c24 !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
+	border-radius: 18px !important;
+	padding: 16px !important;
+	margin-bottom: 30px !important;
+	height: calc(100% - 30px) !important;
+	min-height: 440px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: space-between !important;
+	gap: 12px !important;
+	overflow: hidden !important;
+	transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
+	z-index: 1 !important;
+}
+
+.dark-section .service-item {
+	background: #141c24 !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.service-item:hover {
+	transform: translateY(-8px) !important;
+	border-color: #FA2083 !important;
+	box-shadow: 0 16px 38px rgba(250, 32, 131, 0.25) !important;
+}
+
+/* Image Container: STRICTLY FIXED 220px Height */
 .service-item-media {
-	position: relative;
-	width: 100%;
-	height: 230px;
-	border-radius: 16px;
-	overflow: hidden;
-	background: #111;
-	z-index: 1;
+	position: relative !important;
+	width: 100% !important;
+	height: 220px !important;
+	min-height: 220px !important;
+	max-height: 220px !important;
+	border-radius: 14px !important;
+	overflow: hidden !important;
+	background: #0b1016 !important;
+	margin: 0 0 4px 0 !important;
+	flex-shrink: 0 !important;
+	display: block !important;
+	z-index: 2 !important;
 }
 
 .service-item-media figure {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	overflow: hidden;
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0 !important;
+	overflow: hidden !important;
+	display: block !important;
 }
 
+/* Service Image: Uniform Object-Fit Cover, Zoom on Hover */
 .service-item-media .service-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-	display: block;
-	transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	width: 100% !important;
+	height: 100% !important;
+	min-height: 100% !important;
+	object-fit: cover !important;
+	object-position: center !important;
+	display: block !important;
+	transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+	opacity: 1 !important;
+	visibility: visible !important;
 }
 
 .service-item:hover .service-item-media .service-img {
-	transform: scale(1.08);
+	transform: scale(1.08) !important;
+	opacity: 1 !important;
+	visibility: visible !important;
 }
 
+/* Category Badge on Top-Left of Image */
 .service-item-media .service-badge {
-	position: absolute;
-	top: 12px;
-	left: 12px;
-	z-index: 2;
-	background: rgba(15, 15, 20, 0.82);
-	border: 1px solid rgba(255, 255, 255, 0.25);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	padding: 5px 12px;
-	border-radius: 30px;
-	font-size: 11px;
-	font-weight: 700;
-	letter-spacing: 0.6px;
-	color: #fff;
-	text-transform: uppercase;
-	display: inline-flex;
-	align-items: center;
-	gap: 5px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+	position: absolute !important;
+	top: 12px !important;
+	left: 12px !important;
+	z-index: 5 !important;
+	background: rgba(10, 15, 25, 0.82) !important;
+	border: 1px solid rgba(255, 255, 255, 0.22) !important;
+	backdrop-filter: blur(8px) !important;
+	-webkit-backdrop-filter: blur(8px) !important;
+	padding: 5px 12px !important;
+	border-radius: 30px !important;
+	font-size: 11px !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.6px !important;
+	color: #ffffff !important;
+	text-transform: uppercase !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 6px !important;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35) !important;
 }
 
 .service-item-media .service-badge i {
-	color: #FF3D9A;
-	font-size: 12px;
+	color: #FA2083 !important;
+	font-size: 11px !important;
 }
 
-.service-item-media .service-icon-floating {
-	position: absolute;
-	bottom: 12px;
-	right: 12px;
-	z-index: 2;
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.95);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-	transition: all 0.3s ease;
-}
-
-.service-item:hover .service-icon-floating {
-	background: #fff;
-	transform: rotate(10deg) scale(1.1);
-}
-
-.service-item-media .service-icon-floating img {
-	width: 22px;
-	height: 22px;
-	object-fit: contain;
-}
-
+/* Service Title */
 .service-item-header {
-	margin-top: 5px;
+	margin: 6px 0 0 0 !important;
+	position: relative !important;
+	z-index: 2 !important;
 }
 
 .service-item-header h2 {
 	font-size: 20px !important;
 	font-weight: 700 !important;
-	line-height: 1.3 !important;
+	line-height: 1.35 !important;
 	margin: 0 !important;
+	color: #ffffff !important;
+}
+
+.service-item-header h2 a {
+	color: #ffffff !important;
+	text-decoration: none !important;
+	transition: color 0.3s ease !important;
+}
+
+.service-item:hover .service-item-header h2 a {
+	color: #FA2083 !important;
+}
+
+/* Service Description: 3 Lines Max, Fixed Height for Perfect Alignment */
+.service-item-body {
+	position: relative !important;
+	z-index: 2 !important;
+	flex-grow: 1 !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: space-between !important;
+}
+
+.service-item-content {
+	margin: 6px 0 !important;
 }
 
 .service-item-content p {
 	font-size: 14px !important;
 	line-height: 1.6 !important;
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
+	color: rgba(255, 255, 255, 0.72) !important;
+	margin: 0 !important;
+	display: -webkit-box !important;
+	-webkit-line-clamp: 3 !important;
+	-webkit-box-orient: vertical !important;
+	overflow: hidden !important;
+	min-height: 66px !important;
+	max-height: 66px !important;
 }
 
+.service-item:hover .service-item-content p {
+	color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Service Footer: Price and Book Button */
 .service-item-btn {
-	border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+	border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 	padding-top: 14px !important;
-	margin-top: 10px !important;
+	margin-top: auto !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	position: relative !important;
+	z-index: 2 !important;
+}
+
+.service-item-btn .service-price {
+	font-size: 18px !important;
+	font-weight: 800 !important;
+	color: #FA2083 !important;
+	letter-spacing: 0.2px !important;
+}
+
+.service-item:hover .service-price {
+	color: #FA2083 !important;
+}
+
+.service-item-btn .readmore-btn {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 8px !important;
+	padding: 7px 18px !important;
+	border-radius: 30px !important;
+	background: rgba(250, 32, 131, 0.12) !important;
+	border: 1px solid rgba(250, 32, 131, 0.35) !important;
+	color: #ffffff !important;
+	font-size: 13px !important;
+	font-weight: 600 !important;
+	text-decoration: none !important;
+	transition: all 0.3s ease !important;
+}
+
+.service-item:hover .service-item-btn .readmore-btn {
+	background: #FA2083 !important;
+	border-color: #FA2083 !important;
+	color: #ffffff !important;
+	box-shadow: 0 4px 15px rgba(250, 32, 131, 0.4) !important;
+}
+
+.service-item-btn .readmore-btn::before {
+	display: none !important;
 }

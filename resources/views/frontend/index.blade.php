@@ -221,9 +221,6 @@
                                 <i class="fa-solid fa-sparkles"></i> 
                                 <span>{{ $service->category ?? 'Real Result' }}</span>
                             </div>
-                            <div class="service-icon-floating">
-                                <img src="{{ $service->icon_url }}" alt="{{ $service->title }}">
-                            </div>
                         </div>
 
                         <div class="service-item-header">

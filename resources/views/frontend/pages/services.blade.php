@@ -14,6 +14,28 @@
     <div class="page-header dark-section parallaxie">
         <div class="container">
             <div class="row">
+                <div class="col-lg-12">
+                    <!-- Page Header Box Start -->
+                    <div class="page-header-box">
+                        <h1 class="text-anime-style-3" data-cursor="-opaque">Our Services</h1>
+                        <nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Services</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- Page Header Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Page Services Section Start -->
+    <div class="page-services py-5">
+        <div class="container">
+            <div class="row">
                 @foreach($services as $index => $service)
                 <div class="col-xl-4 col-md-6 mb-4">
                     <div class="service-item wow fadeInUp" data-wow-delay="{{ $index * 0.05 }}s">
@@ -25,9 +47,6 @@
                             <div class="service-badge">
                                 <i class="fa-solid fa-sparkles"></i> 
                                 <span>{{ $service->category ?? 'Real Result' }}</span>
-                            </div>
-                            <div class="service-icon-floating">
-                                <img src="{{ $service->icon_url }}" alt="{{ $service->title }}">
                             </div>
                         </div>
 
@@ -53,7 +72,7 @@
             </div>
         </div>
     </div>
-    <!-- Services Grid Section End -->
+    <!-- Page Services Section End -->
 
 
     <!-- Why Choose Us Section Start -->
