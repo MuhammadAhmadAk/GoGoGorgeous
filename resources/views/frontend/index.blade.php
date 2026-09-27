@@ -210,19 +210,35 @@
 
                 
                 @foreach($services as $index => $service)
-                <div class="col-xl-3 col-md-6 mb-4">
-                    <div class="service-item wow fadeInUp" data-wow-delay="{{ $index * 0.1 }}s">
+                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                    <div class="service-item wow fadeInUp" data-wow-delay="{{ $index * 0.05 }}s">
+                        <!-- Service Real Human Image / Result Showcase -->
+                        <div class="service-item-media">
+                            <figure>
+                                <img src="{{ $service->featured_image_url }}" alt="{{ $service->title }}" class="service-img">
+                            </figure>
+                            <div class="service-badge">
+                                <i class="fa-solid fa-sparkles"></i> 
+                                <span>{{ $service->category ?? 'Real Result' }}</span>
+                            </div>
+                            <div class="service-icon-floating">
+                                <img src="{{ $service->icon_url }}" alt="{{ $service->title }}">
+                            </div>
+                        </div>
+
                         <div class="service-item-header">
                             <h2><a href="{{ route('contact') }}">{{ $service->title }}</a></h2>
-                        </div>
-                        <div class="icon-box">
-                            <img src="{{ $service->icon_url }}" alt="{{ $service->title }}">
                         </div>
                         <div class="service-item-body">
                             <div class="service-item-content">
                                 <p>{{ $service->description }}</p>
                             </div>
-                            <div class="service-item-btn">
+                            <div class="service-item-btn d-flex justify-content-between align-items-center">
+                                @if($service->price > 0)
+                                    <span class="service-price">${{ number_format($service->price, 2) }}</span>
+                                @else
+                                    <span class="service-price">Consultation</span>
+                                @endif
                                 <a href="{{ route('contact') }}" class="readmore-btn">Book Now</a>
                             </div>
                         </div>
