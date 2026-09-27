@@ -38,6 +38,10 @@ class SettingController extends Controller
             $path = $request->file('why_choose_us_image')->store('uploads/settings', 'public');
             $data['why_choose_us_image'] = $path;
         }
+        if ($request->hasFile('hero_bg_image')) {
+            $path = $request->file('hero_bg_image')->store('uploads/settings', 'public');
+            $data['hero_bg_image'] = $path;
+        }
         if ($request->hasFile('approach_image_1')) {
             $path = $request->file('approach_image_1')->store('uploads/settings', 'public');
             $data['approach_image_1'] = $path;
@@ -61,4 +65,5 @@ class SettingController extends Controller
         return redirect()->route('admin.settings.index')->with('success', 'Site settings updated successfully.');
     }
 }
+
 

@@ -66,6 +66,21 @@
                 @endif
             </div>
             <div class="col-md-6 mb-3">
+                <label class="form-label">Hero Background Image</label>
+                <input type="file" name="hero_bg_image" class="form-control">
+                @if(isset($settings['hero_bg_image']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['hero_bg_image'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Hero Subtitle</label>
+                <input type="text" name="hero_subtitle" class="form-control" value="{{ $settings['hero_subtitle'] ?? 'Beauty & Laser Care' }}">
+            </div>
+            <div class="col-md-12 mb-3">
+                <label class="form-label">Hero Description</label>
+                <textarea name="hero_description" class="form-control" rows="3">{{ $settings['hero_description'] ?? 'From flawless skin to smooth, hair-free confidence — Go Go Gorgeous brings expert beauty and laser treatments together under one roof, tailored just for you.' }}</textarea>
+            </div>
+            <div class="col-md-6 mb-3">
                 <label class="form-label">Clinic Name / Hero Title</label>
                 <input type="text" name="hero_title" class="form-control" value="{{ $settings['hero_title'] ?? 'Go Go Gorgeous' }}">
             </div>
@@ -104,5 +119,6 @@
         </button>
     </form>
 @endsection
+
 
 

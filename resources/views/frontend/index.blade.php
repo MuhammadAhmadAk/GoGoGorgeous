@@ -11,7 +11,7 @@
 
 
     <!-- Hero Section Start -->
-    <div class="hero hero-image dark-section parallaxie">
+    <div class="hero hero-image dark-section parallaxie" style="background-image: url('{{ \App\Models\SiteSetting::get('hero_bg_image') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('hero_bg_image'))) : asset('frontend/images/about/hero-bg-image.webp') }}');">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-xl-7">
@@ -19,11 +19,9 @@
                     <div class="hero-content">
                         <!-- Section Title Start -->
                         <div class="section-title">
-                            <span class="section-sub-title wow fadeInUp">Beauty & Laser Care</span>
+                            <span class="section-sub-title wow fadeInUp">{{ \App\Models\SiteSetting::get('hero_subtitle') ?? 'Beauty & Laser Care' }}</span>
                             <h1 class="text-anime-style-3" data-cursor="-opaque">{{ $settings['hero_title'] ?? 'Go Go Gorgeous' }}</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.1s">From flawless skin to smooth,
-                                hair-free confidence — Go Go Gorgeous brings expert beauty and laser treatments together
-                                under one roof, tailored just for you.</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.1s">{{ \App\Models\SiteSetting::get('hero_description') ?? 'From flawless skin to smooth, hair-free confidence - Go Go Gorgeous brings expert beauty and laser treatments together under one roof, tailored just for you.' }}</p>
                         </div>
                         <!-- Section Title End -->
 
@@ -963,5 +961,7 @@
 
 
 @endsection
+
+
 
 
