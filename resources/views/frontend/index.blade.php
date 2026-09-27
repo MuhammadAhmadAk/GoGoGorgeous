@@ -210,57 +210,33 @@
 
                 
                 @foreach($services as $index => $service)
-                @php
-                    $titleWords = explode(' ', trim($service->title));
-                    $lastWord = count($titleWords) > 1 ? array_pop($titleWords) : '';
-                    $prefixWords = implode(' ', $titleWords);
-                @endphp
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                     <div class="service-item wow fadeInUp" data-wow-delay="{{ $index * 0.05 }}s">
-                        <!-- Top Image with Wave Divider -->
-                        <div class="service-media-card">
+                        <!-- Service Real Image Showcase -->
+                        <div class="service-item-media">
                             <figure>
                                 <img src="{{ $service->featured_image_url }}" alt="{{ $service->title }}" class="service-img">
                             </figure>
-                            <div class="service-wave-divider">
-                                <svg viewBox="0 0 500 80" preserveAspectRatio="none">
-                                    <path d="M 0,35 C 130,65 240,40 500,10 L 500,80 L 0,80 Z" class="wave-bg" />
-                                    <path d="M 0,35 C 130,65 240,40 500,10" class="wave-line" />
-                                </svg>
+                            <div class="service-badge">
+                                <i class="fa-solid fa-sparkles"></i> 
+                                <span>{{ $service->category ?? 'Real Result' }}</span>
                             </div>
                         </div>
 
-                        <!-- Card Body Content -->
-                        <div class="service-content-card">
-                            <div>
-                                <div class="service-title-box">
-                                    <h2>
-                                        <a href="{{ route('contact') }}">
-                                            @if(!empty($prefixWords))
-                                                <span>{{ $prefixWords }}</span> <span class="text-pink">{{ $lastWord }}</span>
-                                            @else
-                                                <span class="text-pink">{{ $service->title }}</span>
-                                            @endif
-                                        </a>
-                                    </h2>
-                                </div>
-                                <div class="service-desc-box">
-                                    <p>{{ $service->description }}</p>
-                                </div>
-                                <div class="service-accent-bar"></div>
+                        <div class="service-item-header">
+                            <h2><a href="{{ route('contact') }}">{{ $service->title }}</a></h2>
+                        </div>
+                        <div class="service-item-body">
+                            <div class="service-item-content">
+                                <p>{{ $service->description }}</p>
                             </div>
-
-                            <div class="service-action-row">
-                                <div class="service-price-pill">
-                                    @if($service->price > 0)
-                                        ${{ number_format($service->price, 2) }}
-                                    @else
-                                        Consultation
-                                    @endif
-                                </div>
-                                <a href="{{ route('contact') }}" class="service-book-btn">
-                                    Book Now <i class="fa-solid fa-arrow-right"></i>
-                                </a>
+                            <div class="service-item-btn d-flex justify-content-between align-items-center">
+                                @if($service->price > 0)
+                                    <span class="service-price">${{ number_format($service->price, 2) }}</span>
+                                @else
+                                    <span class="service-price">Consultation</span>
+                                @endif
+                                <a href="{{ route('contact') }}" class="readmore-btn">Book Now</a>
                             </div>
                         </div>
                     </div>
