@@ -142,7 +142,7 @@
                 <div class="col-lg-12">
                     <!-- Footer Copyright Text Start -->
                     <div class="footer-copyright-text">
-                        <p>Copyright &copy; 2025 Go Go Gorgeous. All Rights Reserved.</p>
+                        <p>Copyright &copy; {{ date('Y') }} Go Go Gorgeous. All Rights Reserved.</p>
                     </div>
                     <!-- Footer Copyright Text End -->
                 </div>
@@ -188,3 +188,4 @@
 </body>
 
 </html>
+
