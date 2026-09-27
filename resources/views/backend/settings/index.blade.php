@@ -37,7 +37,14 @@
                     <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['experience_image_small'])) }}" width="150" class="mt-2" style="border-radius:5px;">
                 @endif
             </div>
-            <div class="col-md-4 mb-3">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Our History Image (Years of Passion)</label>
+                <input type="file" name="our_history_image" class="form-control">
+                @if(isset($settings['our_history_image']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['our_history_image'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-6 mb-3">
                 <label class="form-label">Why Choose Us Image</label>
                 <input type="file" name="why_choose_us_image" class="form-control">
                 @if(isset($settings['why_choose_us_image']))
@@ -119,6 +126,7 @@
         </button>
     </form>
 @endsection
+
 
 
 

@@ -322,7 +322,7 @@
                     <!-- Our History Image Start -->
                     <div class="our-history-image">
                         <figure class="image-anime reveal">
-                            <img src="{{ \App\Models\SiteSetting::get('why_choose_us_image') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('why_choose_us_image'))) : asset('frontend/images/about/ceo.webp') }}" alt="">
+                            <img src="{{ \App\Models\SiteSetting::get('our_history_image') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('our_history_image'))) : asset('frontend/images/about/ceo.webp') }}" alt="">
                         </figure>
                     </div>
                     <!-- Our History Image End -->
@@ -961,6 +961,7 @@
 
 
 @endsection
+
 
 
 
