@@ -415,10 +415,14 @@
                 <div class="col-xl-6">
                     <!-- Video Start -->
                     <div class="how-work-bg-video wow fadeInUp" data-wow-delay="0.2s">
-                        <video autoplay="" muted="" playsinline="" loop="" id="workvideo">
-                            <source src="{{ asset('frontend/videos/hairline-how-it-work-video.mp4') }}" type="video/mp4">
-                        </video>
-                    </div>
+                          @if(\App\Models\SiteSetting::get('how_it_works_image'))
+                              <img src="{{ asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('how_it_works_image'))) }}" alt="How It Works" style="width:100%; height:100%; border-radius: 15px; object-fit:cover;">
+                          @else
+                              <video autoplay="" muted="" playsinline="" loop="" id="workvideo">
+                                  <source src="{{ asset('frontend/videos/hairline-how-it-work-video.mp4') }}" type="video/mp4">
+                              </video>
+                          @endif
+                      </div>
                     <!-- Video End -->
                 </div>
             </div>
@@ -1013,6 +1017,7 @@
 
 
 @endsection
+
 
 
 

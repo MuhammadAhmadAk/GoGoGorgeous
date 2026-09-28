@@ -42,6 +42,10 @@ class SettingController extends Controller
             $path = $request->file('our_history_image')->store('uploads/settings', 'public');
             $data['our_history_image'] = $path;
         }
+        if ($request->hasFile('how_it_works_image')) {
+            $path = $request->file('how_it_works_image')->store('uploads/settings', 'public');
+            $data['how_it_works_image'] = $path;
+        }
         if ($request->hasFile('hero_bg_image')) {
             $path = $request->file('hero_bg_image')->store('uploads/settings', 'public');
             $data['hero_bg_image'] = $path;
@@ -69,6 +73,7 @@ class SettingController extends Controller
         return redirect()->route('admin.settings.index')->with('success', 'Site settings updated successfully.');
     }
 }
+
 
 
 
