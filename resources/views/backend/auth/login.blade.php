@@ -20,7 +20,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--secondary-color);
+            background-color: #f4f6f9;
             color: var(--text-color);
             height: 100vh;
             display: flex;
@@ -35,12 +35,12 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             width: 100%;
-            max-width: 450px;
+            max-width: 380px;
         }
 
         .login-header {
             background-color: var(--primary-color);
-            padding: 30px 20px;
+            padding: 25px 20px;
             text-align: center;
             color: #fff;
         }
@@ -57,7 +57,7 @@
         }
 
         .login-body {
-            padding: 40px 30px;
+            padding: 30px 25px;
         }
 
         .form-control {
