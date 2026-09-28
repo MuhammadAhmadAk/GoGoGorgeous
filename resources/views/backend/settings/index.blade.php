@@ -94,6 +94,42 @@
                 <label class="form-label">Hero Description</label>
                 <textarea name="hero_description" class="form-control" rows="3">{{ $settings['hero_description'] ?? 'From flawless skin to smooth, hair-free confidence — Go Go Gorgeous brings expert beauty and laser treatments together under one roof, tailored just for you.' }}</textarea>
             </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">About Page Header BG</label>
+                <input type="file" name="header_bg_about" class="form-control">
+                @if(isset($settings['header_bg_about']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['header_bg_about'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Services Page Header BG</label>
+                <input type="file" name="header_bg_services" class="form-control">
+                @if(isset($settings['header_bg_services']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['header_bg_services'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Gallery Page Header BG</label>
+                <input type="file" name="header_bg_gallery" class="form-control">
+                @if(isset($settings['header_bg_gallery']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['header_bg_gallery'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Team Page Header BG</label>
+                <input type="file" name="header_bg_team" class="form-control">
+                @if(isset($settings['header_bg_team']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['header_bg_team'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Contact Page Header BG</label>
+                <input type="file" name="header_bg_contact" class="form-control">
+                @if(isset($settings['header_bg_contact']))
+                    <img src="{{ asset('uploads/' . str_replace('uploads/', '', $settings['header_bg_contact'])) }}" width="150" class="mt-2" style="border-radius:5px;">
+                @endif
+            </div>
+            <div class="col-md-12 mb-3"><hr></div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Clinic Name / Hero Title</label>
                 <input type="text" name="hero_title" class="form-control" value="{{ $settings['hero_title'] ?? 'Go Go Gorgeous' }}">
@@ -133,6 +169,7 @@
         </button>
     </form>
 @endsection
+
 
 
 

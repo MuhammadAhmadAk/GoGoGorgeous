@@ -11,7 +11,7 @@
 
 
     <!-- Page Header Start -->
-    <div class="page-header dark-section parallaxie">
+    <div class="page-header dark-section parallaxie" style="background-image: url('{{ \App\Models\SiteSetting::get('header_bg_about') ? asset('uploads/' . str_replace('uploads/', '', \App\Models\SiteSetting::get('header_bg_about'))) : asset('frontend/images/about/page-header-bg.webp') }}');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -1017,6 +1017,7 @@
 
 
 @endsection
+
 
 
 

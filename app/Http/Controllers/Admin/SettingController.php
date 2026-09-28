@@ -46,6 +46,26 @@ class SettingController extends Controller
             $path = $request->file('how_it_works_image')->store('uploads/settings', 'public');
             $data['how_it_works_image'] = $path;
         }
+        if ($request->hasFile('header_bg_about')) {
+            $path = $request->file('header_bg_about')->store('uploads/settings', 'public');
+            $data['header_bg_about'] = $path;
+        }
+        if ($request->hasFile('header_bg_services')) {
+            $path = $request->file('header_bg_services')->store('uploads/settings', 'public');
+            $data['header_bg_services'] = $path;
+        }
+        if ($request->hasFile('header_bg_gallery')) {
+            $path = $request->file('header_bg_gallery')->store('uploads/settings', 'public');
+            $data['header_bg_gallery'] = $path;
+        }
+        if ($request->hasFile('header_bg_team')) {
+            $path = $request->file('header_bg_team')->store('uploads/settings', 'public');
+            $data['header_bg_team'] = $path;
+        }
+        if ($request->hasFile('header_bg_contact')) {
+            $path = $request->file('header_bg_contact')->store('uploads/settings', 'public');
+            $data['header_bg_contact'] = $path;
+        }
         if ($request->hasFile('hero_bg_image')) {
             $path = $request->file('hero_bg_image')->store('uploads/settings', 'public');
             $data['hero_bg_image'] = $path;
@@ -73,6 +93,7 @@ class SettingController extends Controller
         return redirect()->route('admin.settings.index')->with('success', 'Site settings updated successfully.');
     }
 }
+
 
 
 
