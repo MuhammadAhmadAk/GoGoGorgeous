@@ -1,4 +1,4 @@
-@extends('backend.layouts.app')
+ï»¿@extends('backend.layouts.app')
 @section('page_title', 'Site Settings')
 
 @section('content')
@@ -92,7 +92,7 @@
             </div>
             <div class="col-md-12 mb-3">
                 <label class="form-label">Hero Description</label>
-                <textarea name="hero_description" class="form-control" rows="3">{{ $settings['hero_description'] ?? 'From flawless skin to smooth, hair-free confidence — Go Go Gorgeous brings expert beauty and laser treatments together under one roof, tailored just for you.' }}</textarea>
+                <textarea name="hero_description" class="form-control" rows="3">{{ $settings['hero_description'] ?? 'From flawless skin to smooth, hair-free confidence ï¿½ Go Go Gorgeous brings expert beauty and laser treatments together under one roof, tailored just for you.' }}</textarea>
             </div>
             <div class="col-md-4 mb-3">
                 <label class="form-label">About Page Header BG</label>
@@ -136,15 +136,11 @@
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Phone Number</label>
-                <input type="text" name="phone" class="form-control" value="{{ $settings['phone'] ?? '+1 234 567 890' }}">
+                <input type="text" name="phone" class="form-control" value="{{ $settings['phone'] ?? '+1 (604) 506-4358' }}">
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Email Address</label>
                 <input type="text" name="email" class="form-control" value="{{ $settings['email'] ?? 'info@gogorgeous.com' }}">
-            </div>
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Clinic Address</label>
-                <input type="text" name="address" class="form-control" value="{{ $settings['address'] ?? '123 Beauty Lane, NY' }}">
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Opening Hours</label>
@@ -152,15 +148,11 @@
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Facebook URL</label>
-                <input type="text" name="facebook_url" class="form-control" value="{{ $settings['facebook_url'] ?? '#' }}">
+                <input type="text" name="facebook_url" class="form-control" value="{{ $settings['facebook_url'] ?? '#' }}" placeholder="https://facebook.com/yourpage">
             </div>
             <div class="col-md-6 mb-3">
                 <label class="form-label">Instagram URL</label>
-                <input type="text" name="instagram_url" class="form-control" value="{{ $settings['instagram_url'] ?? '#' }}">
-            </div>
-            <div class="col-md-6 mb-3">
-                <label class="form-label">Twitter URL</label>
-                <input type="text" name="twitter_url" class="form-control" value="{{ $settings['twitter_url'] ?? '#' }}">
+                <input type="text" name="instagram_url" class="form-control" value="{{ $settings['instagram_url'] ?? '#' }}" placeholder="https://instagram.com/yourprofile">
             </div>
         </div>
 

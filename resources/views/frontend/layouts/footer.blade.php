@@ -69,14 +69,32 @@
                     </div>
                     <p class="footer-brand-desc">
                         Your trusted destination for premium beauty and laser treatments. Look good, feel confident
-                        — every visit.
+                        – every visit.
                     </p>
                     <div class="footer-social-links">
                         <ul>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            @php
+                                $fb = \App\Models\SiteSetting::get('facebook_url');
+                                if ($fb && $fb !== '#' && !str_starts_with($fb, 'http://') && !str_starts_with($fb, 'https://')) {
+                                    $fb = 'https://' . $fb;
+                                }
+                                $insta = \App\Models\SiteSetting::get('instagram_url');
+                                if ($insta && $insta !== '#' && !str_starts_with($insta, 'http://') && !str_starts_with($insta, 'https://')) {
+                                    $insta = 'https://' . $insta;
+                                }
+                            @endphp
+
+                            @if($fb && $fb !== '#')
+                                <li><a href="{{ $fb }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            @else
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            @endif
+
+                            @if($insta && $insta !== '#')
+                                <li><a href="{{ $insta }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                            @else
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -116,18 +134,22 @@
                 <div class="footer-links">
                     <h2>Contact Us</h2>
                     <ul class="footer-contact-list">
+                        @php
+                            $footerPhone = \App\Models\SiteSetting::get('phone', '+1 (604) 506-4358');
+                            $footerEmail = \App\Models\SiteSetting::get('email', 'info@gogorgeous.com');
+                        @endphp
+                        @if($footerPhone)
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            <a href="tel:{{ $settings['phone'] ?? '' }}">+1 (604) 506-4358</a>
+                            <a href="tel:{{ preg_replace('/[^0-9+]/', '', $footerPhone) }}">{{ $footerPhone }}</a>
                         </li>
+                        @endif
+                        @if($footerEmail)
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:{{ $settings['email'] ?? '' }}">info@gogorgeous.com</a>
+                            <a href="mailto:{{ $footerEmail }}">{{ $footerEmail }}</a>
                         </li>
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>16674 64 Ave, Surrey, BC V3S 0W5, Canada</span>
-                        </li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -188,4 +210,3 @@
 </body>
 
 </html>
-
