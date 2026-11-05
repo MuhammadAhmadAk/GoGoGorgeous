@@ -21,6 +21,10 @@ class TeamController extends Controller
 
     public function store(Request $request)
     {
+        if ($request->filled('position') && !$request->filled('designation')) {
+            $request->merge(['designation' => $request->input('position')]);
+        }
+
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'designation' => 'required|string|max:255',
@@ -52,6 +56,10 @@ class TeamController extends Controller
 
     public function update(Request $request, Team $team)
     {
+        if ($request->filled('position') && !$request->filled('designation')) {
+            $request->merge(['designation' => $request->input('position')]);
+        }
+
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'designation' => 'required|string|max:255',

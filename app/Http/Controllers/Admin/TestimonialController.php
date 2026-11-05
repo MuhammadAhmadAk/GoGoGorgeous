@@ -21,6 +21,10 @@ class TestimonialController extends Controller
 
     public function store(Request $request)
     {
+        if ($request->filled('review_text') && !$request->filled('review')) {
+            $request->merge(['review' => $request->input('review_text')]);
+        }
+
         $validated = $request->validate([
             'client_name' => 'required|string|max:255',
             'client_role' => 'nullable|string|max:255',
@@ -50,6 +54,10 @@ class TestimonialController extends Controller
 
     public function update(Request $request, Testimonial $testimonial)
     {
+        if ($request->filled('review_text') && !$request->filled('review')) {
+            $request->merge(['review' => $request->input('review_text')]);
+        }
+
         $validated = $request->validate([
             'client_name' => 'required|string|max:255',
             'client_role' => 'nullable|string|max:255',
