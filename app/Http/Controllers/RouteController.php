@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use App\Models\Service;
 use App\Models\Gallery;
 use App\Models\Team;
@@ -13,39 +14,63 @@ use App\Models\Inquiry;
 class RouteController extends Controller{
 
     public function index(){
-        $services = Service::active()->orderBy('order', 'asc')->get();
-        $galleries = Gallery::active()->orderBy('order', 'asc')->take(6)->get();
-        $teams = Team::active()->orderBy('order', 'asc')->take(3)->get();
-        $testimonials = Testimonial::active()->orderBy('order', 'asc')->get();
-        $faqs = Faq::active()->orderBy('order', 'asc')->get();
+        $services = Cache::remember('active_services_all', 86400, function() {
+            return Service::active()->orderBy('order', 'asc')->get();
+        });
+        $galleries = Cache::remember('active_galleries_home', 86400, function() {
+            return Gallery::active()->orderBy('order', 'asc')->take(6)->get();
+        });
+        $teams = Cache::remember('active_teams_home', 86400, function() {
+            return Team::active()->orderBy('order', 'asc')->take(3)->get();
+        });
+        $testimonials = Cache::remember('active_testimonials_all', 86400, function() {
+            return Testimonial::active()->orderBy('order', 'asc')->get();
+        });
+        $faqs = Cache::remember('active_faqs_all', 86400, function() {
+            return Faq::active()->orderBy('order', 'asc')->get();
+        });
 
         return view('frontend.index', compact('services', 'galleries', 'teams', 'testimonials', 'faqs'));
     }
 
     public function about(){
-        $teams = Team::active()->orderBy('order', 'asc')->take(3)->get();
-        $testimonials = Testimonial::active()->orderBy('order', 'asc')->get();
+        $teams = Cache::remember('active_teams_home', 86400, function() {
+            return Team::active()->orderBy('order', 'asc')->take(3)->get();
+        });
+        $testimonials = Cache::remember('active_testimonials_all', 86400, function() {
+            return Testimonial::active()->orderBy('order', 'asc')->get();
+        });
         return view('frontend.pages.about', compact('teams', 'testimonials'));
     }
 
     public function services(){
-        $services = Service::active()->orderBy('order', 'asc')->get();
-        $faqs = Faq::active()->orderBy('order', 'asc')->get();
+        $services = Cache::remember('active_services_all', 86400, function() {
+            return Service::active()->orderBy('order', 'asc')->get();
+        });
+        $faqs = Cache::remember('active_faqs_all', 86400, function() {
+            return Faq::active()->orderBy('order', 'asc')->get();
+        });
         return view('frontend.pages.services', compact('services', 'faqs'));
     }
     
     public function gallery(){
-        $galleries = Gallery::active()->orderBy('order', 'asc')->get();
+        $galleries = Cache::remember('active_galleries_all', 86400, function() {
+            return Gallery::active()->orderBy('order', 'asc')->get();
+        });
         return view('frontend.pages.gallery', compact('galleries'));
     }
 
     public function team(){
-        $teams = Team::active()->orderBy('order', 'asc')->get();
+        $teams = Cache::remember('active_teams_all', 86400, function() {
+            return Team::active()->orderBy('order', 'asc')->get();
+        });
         return view('frontend.pages.team', compact('teams'));
     }
 
     public function contact(){
-        $services = Service::active()->orderBy('order', 'asc')->get();
+        $services = Cache::remember('active_services_all', 86400, function() {
+            return Service::active()->orderBy('order', 'asc')->get();
+        });
         return view('frontend.pages.contact', compact('services'));
     }
 

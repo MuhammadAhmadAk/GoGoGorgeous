@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Gallery extends Model
 {
@@ -20,6 +21,21 @@ class Gallery extends Model
     protected $casts = [
         'status' => 'boolean',
     ];
+
+    protected static function booted()
+    {
+        static::saved(function () {
+            Cache::forget('active_galleries_all');
+            Cache::forget('active_galleries_home');
+            Cache::forget('active_galleries_footer');
+        });
+
+        static::deleted(function () {
+            Cache::forget('active_galleries_all');
+            Cache::forget('active_galleries_home');
+            Cache::forget('active_galleries_footer');
+        });
+    }
 
     public function scopeActive($query)
     {

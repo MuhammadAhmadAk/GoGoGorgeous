@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Testimonial extends Model
 {
@@ -23,6 +24,17 @@ class Testimonial extends Model
         'rating' => 'integer',
         'status' => 'boolean',
     ];
+
+    protected static function booted()
+    {
+        static::saved(function () {
+            Cache::forget('active_testimonials_all');
+        });
+
+        static::deleted(function () {
+            Cache::forget('active_testimonials_all');
+        });
+    }
 
     public function scopeActive($query)
     {

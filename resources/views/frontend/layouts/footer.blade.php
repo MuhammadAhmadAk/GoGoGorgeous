@@ -1,6 +1,3 @@
-@php
-    $footerGalleries = \App\Models\Gallery::active()->orderBy('order', 'asc')->take(6)->get();
-@endphp
 <!-- Footer Gallery Start -->
 <div class="footer-gallery">
     <div class="container-fluid">

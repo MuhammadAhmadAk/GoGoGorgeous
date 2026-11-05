@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Cache;
 
 class Service extends Model
 {
@@ -29,14 +30,20 @@ class Service extends Model
         'price' => 'decimal:2',
     ];
 
-    protected static function boot()
+    protected static function booted()
     {
-        parent::boot();
-
         static::creating(function ($service) {
             if (empty($service->slug)) {
                 $service->slug = Str::slug($service->title);
             }
+        });
+
+        static::saved(function () {
+            Cache::forget('active_services_all');
+        });
+
+        static::deleted(function () {
+            Cache::forget('active_services_all');
         });
     }
 
