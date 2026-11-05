@@ -1,55 +1,32 @@
+@php
+    $footerGalleries = \App\Models\Gallery::active()->orderBy('order', 'asc')->take(6)->get();
+@endphp
 <!-- Footer Gallery Start -->
 <div class="footer-gallery">
     <div class="container-fluid">
         <!-- Footer Gallery Image Start -->
         <div class="footer-gallery-list page-gallery-box wow fadeInUp">
-            <!-- Image Gallery start -->
-            <div class="photo-gallery">
-                <figure class="image-anime">
-                    <img src="{{ asset('frontend/images/gallery/gallery-1.webp') }}" alt="">
-                </figure>
-            </div>
-            <!-- Image Gallery end -->
-
-            <!-- Image Gallery start -->
-            <div class="photo-gallery">
-                <figure class="image-anime">
-                    <img src="{{ asset('frontend/images/gallery/gallery-2.webp') }}" alt="">
-                </figure>
-            </div>
-            <!-- Image Gallery end -->
-
-            <!-- Image Gallery start -->
-            <div class="photo-gallery">
-                <figure class="image-anime">
-                    <img src="{{ asset('frontend/images/gallery/gallery-3.webp') }}" alt="">
-                </figure>
-            </div>
-            <!-- Image Gallery end -->
-
-            <!-- Image Gallery start -->
-            <div class="photo-gallery">
-                <figure class="image-anime">
-                    <img src="{{ asset('frontend/images/gallery/gallery-4.webp') }}" alt="">
-                </figure>
-            </div>
-            <!-- Image Gallery end -->
-
-            <!-- Image Gallery start -->
-            <div class="photo-gallery">
-                <figure class="image-anime">
-                    <img src="{{ asset('frontend/images/gallery/gallery-5.webp') }}" alt="">
-                </figure>
-            </div>
-            <!-- Image Gallery end -->
-
-            <!-- Image Gallery start -->
-            <div class="photo-gallery">
-                <figure class="image-anime">
-                    <img src="{{ asset('frontend/images/gallery/gallery-6.webp') }}" alt="">
-                </figure>
-            </div>
-            <!-- Image Gallery end -->
+            @if($footerGalleries->count() > 0)
+                @foreach($footerGalleries as $gItem)
+                <!-- Image Gallery start -->
+                <div class="photo-gallery">
+                    <a href="{{ route('gallery') }}">
+                        <figure class="image-anime">
+                            <img src="{{ $gItem->image_url }}" alt="{{ $gItem->title ?? 'Gallery' }}" style="object-fit: cover; width: 100%; height: 100%;">
+                        </figure>
+                    </a>
+                </div>
+                <!-- Image Gallery end -->
+                @endforeach
+            @else
+                @for($i = 1; $i <= 6; $i++)
+                <div class="photo-gallery">
+                    <figure class="image-anime">
+                        <img src="{{ asset('frontend/images/gallery/gallery-' . $i . '.webp') }}" alt="">
+                    </figure>
+                </div>
+                @endfor
+            @endif
         </div>
         <!-- Footer Gallery Image End -->
     </div>
