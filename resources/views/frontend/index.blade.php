@@ -505,84 +505,39 @@
             </div>
 
             <div class="row">
+                @forelse($teams as $index => $member)
                 <div class="col-xl-4 col-md-6">
                     <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp">
+                    <div class="team-item wow fadeInUp" data-wow-delay="{{ $index * 0.2 }}s">
                         <div class="team-item-image">
                             <figure>
-                                <img src="{{ asset('frontend/images/team/team-1.webp') }}" alt="">
+                                <img src="{{ $member->image_url }}" alt="{{ $member->name }}">
                             </figure>
                         </div>
                         <div class="team-item-body">
                             <div class="team-item-content">
-                                <h2>Sana Mali</h2>
-                                <p>Senior Beautician</p>
+                                <h2>{{ $member->name }}</h2>
+                                <p>{{ $member->designation }}</p>
                             </div>
                             <div class="team-item-social-list">
                                 <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @if($member->facebook_url)
+                                    <li><a href="{{ $member->facebook_url }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    @endif
+                                    @if($member->instagram_url)
+                                    <li><a href="{{ $member->instagram_url }}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                    @endif
+                                    @if($member->linkedin_url)
+                                    <li><a href="{{ $member->linkedin_url }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- Team Item End -->
                 </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item-image">
-                            <figure>
-                                <img src="{{ asset('frontend/images/team/team-2.webp') }}" alt="">
-                            </figure>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-item-content">
-                                <h2>Hira Ahmed</h2>
-                                <p>Laser & Skin Specialist</p>
-                            </div>
-                            <div class="team-item-social-list">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item-image">
-                            <figure>
-                                <img src="{{ asset('frontend/images/team/team-3.webp') }}" alt="">
-                            </figure>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-item-content">
-                                <h2>Fatima Raz</h2>
-                                <p>Hair & Color Expert</p>
-                            </div>
-                            <div class="team-item-social-list">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
+                @empty
+                @endforelse
                 <div class="col-lg-12">
                     <!-- Section Footer Text Start -->
                     <div class="section-footer-text section-satisfy-img wow fadeInUp" data-wow-delay="0.6s">
@@ -639,78 +594,25 @@
                 <div class="col-xl-6">
                     <!-- FAQ Accordion Start -->
                     <div class="faq-accordion" id="accordion">
+                        @forelse($faqs as $index => $faq)
                         <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                    Do I need to book an appointment in advance?
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="{{ $index * 0.2 }}s">
+                            <h2 class="accordion-header" id="heading{{ $index }}">
+                                <button class="accordion-button {{ $index == 0 ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse{{ $index }}" aria-expanded="{{ $index == 0 ? 'true' : 'false' }}" aria-controls="collapse{{ $index }}">
+                                    {{ $faq->question }}
                                 </button>
                             </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" role="region"
-                                aria-labelledby="heading1" data-bs-parent="#accordion">
+                            <div id="collapse{{ $index }}" class="accordion-collapse collapse {{ $index == 0 ? 'show' : '' }}" role="region"
+                                aria-labelledby="heading{{ $index }}" data-bs-parent="#accordion">
                                 <div class="accordion-body">
-                                    <p>Yes, we recommend booking in advance to secure your preferred time slot,
-                                        especially for laser and skin treatments.</p>
+                                    <p>{{ $faq->answer }}</p>
                                 </div>
                             </div>
                         </div>
                         <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                                    What services do you offer?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" role="region"
-                                aria-labelledby="heading2" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>We offer a full range of beauty and laser services including hair coloring,
-                                        cutting, facials, waxing, threading, laser hair removal, skin rejuvenation,
-                                        microblading, body sculpting, and more.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    How long does a typical laser session take?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" role="region"
-                                aria-labelledby="heading3" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>Depending on the treatment area, a laser session usually takes 15 to 45 minutes.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    Are your products and equipment hygienic?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" role="region"
-                                aria-labelledby="heading4" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>Absolutely. We follow strict hygiene protocols and use sterilized, high-quality
-                                        equipment and products for every client.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
+                        @empty
+                        @endforelse
                     </div>
                     <!-- FAQ Accordion End -->
                 </div>
@@ -742,37 +644,36 @@
                     <div class="testimonials-slider">
                         <div class="swiper">
                             <div class="swiper-wrapper" data-cursor-text="Drag">
+                                @forelse($testimonials as $testimonial)
                                 <!-- Testimonials Slide Start -->
                                 <div class="swiper-slide">
                                     <!-- Testimonials Item Start -->
                                     <div class="testimonials-item">
                                         <div class="testimonials-item-image">
                                             <figure class="image-anime">
-                                                <img src="{{ asset('frontend/images/gallery/gallery-1.webp') }}"
-                                                    alt="">
+                                                <img src="{{ $testimonial->avatar_url }}" alt="{{ $testimonial->client_name }}">
                                             </figure>
                                         </div>
                                         <div class="testimonials-item-body">
                                             <div class="testimonials-item-content">
                                                 <span class="testimonials-item-rating-star">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
+                                                    @for($i = 1; $i <= 5; $i++)
+                                                        @if($i <= ($testimonial->rating ?? 5))
+                                                            <i class="fa-solid fa-star"></i>
+                                                        @else
+                                                            <i class="fa-regular fa-star"></i>
+                                                        @endif
+                                                    @endfor
                                                 </span>
-                                                <p>"I got laser hair removal done here and the results are amazing. The
-                                                    staff was very professional and made me feel comfortable throughout
-                                                    the process."</p>
+                                                <p>"{{ $testimonial->review }}"</p>
                                             </div>
                                             <div class="testimonials-item-author">
                                                 <div class="testimonials-item-author-content">
-                                                    <h2>Mahnoor Fatima</h2>
-                                                    <p>Satisfied Client</p>
+                                                    <h2>{{ $testimonial->client_name }}</h2>
+                                                    <p>{{ $testimonial->client_role ?? 'Satisfied Client' }}</p>
                                                 </div>
                                                 <div class="testimonial-item-quote">
-                                                    <img src="{{ asset('frontend/images/icons/testimonial-quote.svg') }}"
-                                                        alt="">
+                                                    <img src="{{ asset('frontend/images/icons/testimonial-quote.svg') }}" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -780,157 +681,8 @@
                                     <!-- Testimonials Item End -->
                                 </div>
                                 <!-- Testimonials Slide End -->
-
-                                <!-- Testimonials Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonials Item Start -->
-                                    <div class="testimonials-item">
-                                        <div class="testimonials-item-image">
-                                            <figure class="image-anime">
-                                                <img src="{{ asset('frontend/images/gallery/gallery-2.webp') }}"
-                                                    alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="testimonials-item-body">
-                                            <div class="testimonials-item-content">
-                                                <span class="testimonials-item-rating-star">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </span>
-                                                <p>"Best facial I've ever had! My skin feels so fresh and glowing.
-                                                    Highly recommend Go Go Gorgeous to everyone."</p>
-                                            </div>
-                                            <div class="testimonials-item-author">
-                                                <div class="testimonials-item-author-content">
-                                                    <h2>Areeba Siddiqui</h2>
-                                                    <p>Satisfied Client</p>
-                                                </div>
-                                                <div class="testimonial-item-quote">
-                                                    <img src="{{ asset('frontend/images/icons/testimonial-quote.svg') }}"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item End -->
-                                </div>
-                                <!-- Testimonials Slide End -->
-
-                                <!-- Testimonials Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonials Item Start -->
-                                    <div class="testimonials-item">
-                                        <div class="testimonials-item-image">
-                                            <figure class="image-anime">
-                                                <img src="{{ asset('frontend/images/gallery/gallery-3.webp') }}"
-                                                    alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="testimonials-item-body">
-                                            <div class="testimonials-item-content">
-                                                <span class="testimonials-item-rating-star">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <p>"The hair coloring service exceeded my expectations. Very skilled
-                                                        team and a relaxing environment."</p>
-                                            </div>
-                                            <div class="testimonials-item-author">
-                                                <div class="testimonials-item-author-content">
-                                                    <h2>Zainab Tariq</h2>
-                                                    <p>Satisfied Client</p>
-                                                </div>
-                                                <div class="testimonial-item-quote">
-                                                    <img src="{{ asset('frontend/images/icons/testimonial-quote.svg') }}"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item End -->
-                                </div>
-                                <!-- Testimonials Slide End -->
-
-                                <!-- Testimonials Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonials Item Start -->
-                                    <div class="testimonials-item">
-                                        <div class="testimonials-item-image">
-                                            <figure class="image-anime">
-                                                <img src="{{ asset('frontend/images/gallery/gallery-4.webp') }}"
-                                                    alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="testimonials-item-body">
-                                            <div class="testimonials-item-content">
-                                                <span class="testimonials-item-rating-star">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </span>
-                                                <p>"I've been coming here for microblading and skin treatments for
-                                                    months now. Consistent quality every single time."</p>
-                                            </div>
-                                            <div class="testimonials-item-author">
-                                                <div class="testimonials-item-author-content">
-                                                    <h2>Kinza Rehman</h2>
-                                                    <p>Satisfied Client</p>
-                                                </div>
-                                                <div class="testimonial-item-quote">
-                                                    <img src="{{ asset('frontend/images/icons/testimonial-quote.svg') }}"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item End -->
-                                </div>
-                                <!-- Testimonials Slide End -->
-
-                                <!-- Testimonials Slide Start -->
-                                <div class="swiper-slide">
-                                    <!-- Testimonials Item Start -->
-                                    <div class="testimonials-item">
-                                        <div class="testimonials-item-image">
-                                            <figure class="image-anime">
-                                                <img src="{{ asset('frontend/images/gallery/gallery-5.webp') }}"
-                                                    alt="">
-                                            </figure>
-                                        </div>
-                                        <div class="testimonials-item-body">
-                                            <div class="testimonials-item-content">
-                                                <span class="testimonials-item-rating-star">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </span>
-                                                <p>"Clean, professional, and truly caring staff. My go-to place for all
-                                                    beauty needs."</p>
-                                            </div>
-                                            <div class="testimonials-item-author">
-                                                <div class="testimonials-item-author-content">
-                                                    <h2>Noor-ul-Ain Sheikh</h2>
-                                                    <p>Satisfied Client</p>
-                                                </div>
-                                                <div class="testimonial-item-quote">
-                                                    <img src="{{ asset('frontend/images/icons/testimonial-quote.svg') }}"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Testimonials Item End -->
-                                </div>
-                                <!-- Testimonials Slide End -->
+                                @empty
+                                @endforelse
                             </div>
                         </div>
                     </div>

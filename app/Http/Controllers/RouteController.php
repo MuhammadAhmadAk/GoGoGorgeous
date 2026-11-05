@@ -24,7 +24,8 @@ class RouteController extends Controller{
 
     public function about(){
         $teams = Team::active()->orderBy('order', 'asc')->take(3)->get();
-        return view('frontend.pages.about', compact('teams'));
+        $testimonials = Testimonial::active()->orderBy('order', 'asc')->get();
+        return view('frontend.pages.about', compact('teams', 'testimonials'));
     }
 
     public function services(){
@@ -75,4 +76,3 @@ class RouteController extends Controller{
         return response()->view('errors.404', [], 404);
     }
 }
-

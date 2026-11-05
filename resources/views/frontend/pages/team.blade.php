@@ -36,85 +36,39 @@
     <div class="page-team">
         <div class="container">
             <div class="row">
-
+                @forelse($teams as $index => $member)
                 <div class="col-xl-4 col-md-6">
                     <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp">
+                    <div class="team-item wow fadeInUp" data-wow-delay="{{ $index * 0.2 }}s">
                         <div class="team-item-image">
                             <figure>
-                                <img src="{{ asset('frontend/images/team/team-1.webp') }}" alt="">
+                                <img src="{{ $member->image_url }}" alt="{{ $member->name }}">
                             </figure>
                         </div>
                         <div class="team-item-body">
                             <div class="team-item-content">
-                                <h2>Sana Mali</h2>
-                                <p>Senior Beautician</p>
+                                <h2>{{ $member->name }}</h2>
+                                <p>{{ $member->designation }}</p>
                             </div>
                             <div class="team-item-social-list">
                                 <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @if($member->facebook_url)
+                                    <li><a href="{{ $member->facebook_url }}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    @endif
+                                    @if($member->instagram_url)
+                                    <li><a href="{{ $member->instagram_url }}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                    @endif
+                                    @if($member->linkedin_url)
+                                    <li><a href="{{ $member->linkedin_url }}" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- Team Item End -->
                 </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item-image">
-                            <figure>
-                                <img src="{{ asset('frontend/images/team/team-2.webp') }}" alt="">
-                            </figure>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-item-content">
-                                <h2>Hira Ahmed</h2>
-                                <p>Laser & Skin Specialist</p>
-                            </div>
-                            <div class="team-item-social-list">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
-                <div class="col-xl-4 col-md-6">
-                    <!-- Team Item Start -->
-                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item-image">
-                            <figure>
-                                <img src="{{ asset('frontend/images/team/team-3.webp') }}" alt="">
-                            </figure>
-                        </div>
-                        <div class="team-item-body">
-                            <div class="team-item-content">
-                                <h2>Fatima Raz</h2>
-                                <p>Hair & Color Expert</p>
-                            </div>
-                            <div class="team-item-social-list">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Item End -->
-                </div>
-
+                @empty
+                @endforelse
             </div>
         </div>
     </div>
